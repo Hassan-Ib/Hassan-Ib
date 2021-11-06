@@ -11,8 +11,9 @@ type NextPageWithLayout = NextPage & {
 
 const Home: NextPageWithLayout = () => {
   return (
-    <main className="flex flex-col gap-6 py-8 px-2  md:flex-row">
+    <main className="flex flex-col gap-6 py-8 px-4 md:flex-row md:pt-20 md:justify-around md:items-center">
       <Meta title="Hassan Ibrahim Ayomide" />
+
       {/* image and name*/}
 
       <section className=" flex flex-col self-start items-center ">
@@ -29,8 +30,8 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
 
-        <div className="my-8 md:my-10">
-          <h2 className="text-lg lg:text-2xl md:font-medium tracking-wide">
+        <div className="my-8  md:my-10">
+          <h2 className="text-xl lg:text-2xl md:font-medium tracking-wide">
             Hi, my name is Ibrahim.
           </h2>
         </div>
@@ -38,17 +39,17 @@ const Home: NextPageWithLayout = () => {
 
       {/* links */}
 
-      <section className="text-3xl text-right flex flex-col self-end gap-4  lg:text-5xl md:gap-8 ">
-        <span className="underline pr-8 lg:pr-16">
+      <section className="text-3xl text-right md:text-4xl flex flex-col self-end gap-2 lg:text-5xl md:gap-8 ">
+        <span className="underline">
           <Link href="/about">Web developer </Link>
         </span>
-        <span className="underline pr-4 lg:pr-8">
+        <span className="underline ">
           <Link href="/dowload-cv"> Download CV </Link>
         </span>
         {/* <span className="underline">Blogger</span> */}
 
-        <span className="pr-4 lg:pr-8"> Book Worm</span>
-        <span className="pr-8 lg:pr-16"> Chess enthusiast</span>
+        <span className=""> Book Worm</span>
+        <span className=""> Chess enthusiast</span>
       </section>
     </main>
   );
