@@ -8,7 +8,7 @@ export type LinkProps = NextLinkProps & {
 
 const Link = ({ href, children, className, ariaLabel }: LinkProps) => {
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref>
       <a aria-label={ariaLabel} className={className}>
         {children}
       </a>

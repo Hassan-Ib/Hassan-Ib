@@ -36,15 +36,22 @@ const Navigation = (props: Props) => {
         <div
           className={`uppercase tracking-wide flex flex-col absolute left-0 top-0 w-full py-8 px-4 bg-main ${
             isNavOpen || "hidden"
-          } dark:bg-main-dark md:p-0 md:flex md:flex-grow 
+          } dark:bg-main-dark md:p-0 md:text-xl md:flex md:flex-grow 
           z-20 md:relative md:flex-row md:gap-4 md:items-center md:justify-center`}>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/download-cv">download cv</NavLink>
           <Link
             href="/"
-            className="order-first md:order-none px-8 relative"
+            className="order-first md:order-none relative flex items-center"
             ariaLabel="Click to go back to homepage">
-            <Image src={Logo} alt="Hassan logo | home Logo" layout="fill" />
+            <div className="absolute w-10  h-10  top-4  border border-main-dark dark:border-white transform origin-right rotate-45" />
+            <Image
+              src={Logo}
+              alt="Hassan logo | home Logo"
+              width="70"
+              height="50"
+            />
+            <span className=" md:hidden">Home</span>
           </Link>
           <NavLink href="/about#contact">contact</NavLink>
           <NavLink href="/playChess">Lets play</NavLink>

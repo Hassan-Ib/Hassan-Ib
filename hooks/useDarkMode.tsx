@@ -24,7 +24,7 @@ export default function useDarkMode() {
   }, []);
 
   React.useEffect(() => {
-    console.log(localStorage.theme);
+    // console.log(localStorage.theme);
     let root = window.document.documentElement;
     darkMode ? root.classList.add("dark") : root.classList.remove("dark");
 

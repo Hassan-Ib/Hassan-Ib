@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import React, { ReactElement, ReactNode } from "react";
-import { Container, Layout, Meta } from "../components";
+import { Container, Layout, Meta, HassanProfile } from "../components";
 import Image from "next/image";
 import HassanImage from "./../public/img/profile 1.jpg";
 import Link from "next/link";
@@ -11,25 +11,13 @@ type NextPageWithLayout = NextPage & {
 
 const Home: NextPageWithLayout = () => {
   return (
-    <main className="flex flex-col gap-6 py-8 px-4 md:flex-row md:pt-20 md:justify-around md:items-center">
+    <main className="pt-12 px-4  flex flex-col md:flex-row md:items-center md:justify-around md:border border-main-dark dark:border-white h-full styled-scroll overflow-y-auto">
       <Meta title="Hassan Ibrahim Ayomide" />
 
       {/* image and name*/}
 
-      <section className=" flex flex-col self-start items-center ">
-        <div className="relative ">
-          <div className="w-36 h-36 md:w-44 md:h-44 border-2 border-main-dark dark:border-main absolute left-6 top-2 transform rotate-45"></div>
-          <div className="relative rounded-full w-40  h-40 md:w-48 md:h-48 overflow-hidden">
-            <Image
-              src={HassanImage}
-              alt="Hassan Ibrahim"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            />
-          </div>
-        </div>
-
+      <section className=" flex flex-col self-start md:self-auto items-center ">
+        <HassanProfile />
         <div className="my-8  md:my-10">
           <h2 className="text-xl lg:text-2xl md:font-medium tracking-wide">
             Hi, my name is Ibrahim.
@@ -39,7 +27,7 @@ const Home: NextPageWithLayout = () => {
 
       {/* links */}
 
-      <section className="text-3xl text-right md:text-4xl flex flex-col self-end gap-2 lg:text-5xl md:gap-8 ">
+      <section className="text-3xl text-right md:text-4xl flex flex-col self-end md:self-auto gap-2 lg:text-5xl md:gap-8 ">
         <span className="underline">
           <Link href="/about">Web developer </Link>
         </span>

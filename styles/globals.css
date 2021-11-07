@@ -20,7 +20,11 @@ a {
   box-sizing: border-box;
 }
 
-div::-webkit-scrollbar-button {
-  width: 0px;
-  visibility: hidden;
+.styled-scroll::-webkit-scrollbar {
+  /* width: 2px; */
+  @apply bg-transparent w-2 md:w-3;
+}
+
+.styled-scroll::-webkit-scrollbar-thumb {
+  @apply bg-main-dark dark:bg-main;
 }

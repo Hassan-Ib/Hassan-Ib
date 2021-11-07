@@ -12,6 +12,7 @@ type Props = {
 const Social = (props: LinkProps & { linkTo: string }) => {
   return (
     <Link
+      className={props.className}
       href={props.href}
       ariaLabel={`Hassan Ibrahim | Developer | ${props.linkTo} link`}>
       {props.children}
@@ -24,7 +25,7 @@ const Footer = (props: Props) => {
     <footer className="relative z-20 p-2 pt-4 md:pt-8 flex flex-col justify-center items-center ">
       <div
         aria-label="social media icons"
-        className="flex justify-center gap-6 mb-1 text-xl dark:text-white">
+        className="flex justify-center gap-6 mb-1 text-xl md:text-2xl dark:text-white">
         <Social href="https://github.com/Hassan-Ib" linkTo="github">
           <VscGithub />
         </Social>
@@ -41,16 +42,21 @@ const Footer = (props: Props) => {
           linkTo="facebook">
           <FaFacebookF />
         </Social>
-        <Social href="https://twitter.com/Azanebrahim" linkTo="lichess">
+        <Social
+          href="https://twitter.com/Azanebrahim"
+          linkTo="lichess"
+          className="">
           <SiLichess />
         </Social>
       </div>
 
       <div
         className={`${props.className} py-1 w-full text-xs text-center  bg-main dark:bg-main-dark`}>
-        Design inspired by{" "}
-        <Link href="https://mayashavin.com">Maya Shavin</Link> & Developed by
-        Hassan Ibrahim with ❤ - © 2021
+        Design inspired by
+        <Link href="https://mayashavin.com" className="underline px-1">
+          Maya Shavin
+        </Link>{" "}
+        & Developed by Hassan Ibrahim with 🧡 - © 2021
       </div>
     </footer>
   );
