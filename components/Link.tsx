@@ -6,11 +6,11 @@ export type LinkProps = NextLinkProps & {
   ariaLabel?: string;
 };
 
-const Link = ({ href, children, className, ariaLabel }: LinkProps) => {
+const Link = (props: LinkProps) => {
   return (
-    <NextLink href={href} passHref>
-      <a aria-label={ariaLabel} className={className}>
-        {children}
+    <NextLink passHref {...props}>
+      <a aria-label={props.ariaLabel} className={props.className}>
+        {props.children}
       </a>
     </NextLink>
   );

@@ -4,14 +4,21 @@ import { Container, Layout, Meta, HassanProfile } from "../components";
 import Image from "next/image";
 import HassanImage from "./../public/img/profile 1.jpg";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
 const Home: NextPageWithLayout = () => {
+  const { pathname } = useRouter();
+  console.log(pathname);
+
   return (
-    <main className="pt-12 px-4  flex flex-col md:flex-row md:items-center md:justify-around md:border border-main-dark dark:border-white h-full styled-scroll overflow-y-auto">
+    <main
+      className={`fadeout ${
+        pathname === "/" && "fadein"
+      } pt-12 px-4  flex flex-col md:flex-row md:items-center md:justify-around md:border border-main-dark dark:border-white h-full styled-scroll overflow-y-auto`}>
       <Meta title="Hassan Ibrahim Ayomide" />
 
       {/* image and name*/}

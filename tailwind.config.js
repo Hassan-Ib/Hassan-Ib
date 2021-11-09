@@ -8,10 +8,14 @@ module.exports = {
           black: "#1f212b",
           white: "#ffffff",
         },
-        main: "#DBDEE2",
-        "main-dark": "#011938",
-        side: "#9E9F9F",
-        "side-dark": "#435974",
+        main: {
+          light: "#ffffff",
+          dark: "#011938",
+        },
+        card: {
+          dark: "#0A2B53",
+          light: "#F0DB4F",
+        },
       },
     },
   },

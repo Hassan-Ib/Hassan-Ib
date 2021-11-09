@@ -25,7 +25,7 @@ const Footer = (props: Props) => {
     <footer className="relative z-20 p-2 pt-4 md:pt-8 flex flex-col justify-center items-center ">
       <div
         aria-label="social media icons"
-        className="flex justify-center gap-6 mb-1 text-xl md:text-2xl dark:text-white">
+        className="flex justify-center gap-6 mb-1 text-xl md:text-2xl dark:text-primary-white">
         <Social href="https://github.com/Hassan-Ib" linkTo="github">
           <VscGithub />
         </Social>
@@ -51,7 +51,7 @@ const Footer = (props: Props) => {
       </div>
 
       <div
-        className={`${props.className} py-1 w-full text-xs text-center  bg-main dark:bg-main-dark`}>
+        className={`${props.className} py-1 w-full text-xs text-center  bg-main-light dark:bg-main-dark`}>
         Design inspired by
         <Link href="https://mayashavin.com" className="underline px-1">
           Maya Shavin

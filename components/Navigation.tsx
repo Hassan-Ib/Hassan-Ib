@@ -6,35 +6,44 @@ import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import Link, { LinkProps } from "./Link";
 import Image from "next/image";
 import Logo from "../public/hassan-logo.svg";
+import { useRouter } from "next/router";
 
 type Props = {
   className?: string;
 };
 
-const NavLink = (props: LinkProps) => {
+const NavLink = ({
+  children,
+  closeNav,
+  href,
+}: LinkProps & { closeNav?: () => void }) => {
   return (
     <Link
-      href={props.href}
-      className="py-2 px-1 md:border-b-2 md:border-main-dark md:dark:border-main">
-      {props.children}
+      href={href}
+      className="py-2 px-1 md:border-b-2 md:border-main-dark md:dark:border-main-light">
+      <span onClick={closeNav}>{children}</span>
     </Link>
   );
 };
 const Navigation = (props: Props) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [isNavOpen, setIsNavOpen] = React.useState(false);
-
+  const { pathname } = useRouter();
   // console.log(darkMode, toggleDarkMode);
 
   const openNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  React.useEffect(() => {
+    setIsNavOpen(false);
+  }, [pathname]);
+
   return (
-    <header className="bg-main py-1  dark:bg-main-dark ">
+    <header className=" py-1 bg-main-light  dark:bg-main-dark ">
       <nav className="py-4 px-4 flex items-center justify-end">
         <div
-          className={`uppercase tracking-wide flex flex-col absolute left-0 top-0 w-full py-8 px-4 bg-main ${
+          className={`uppercase tracking-wide flex flex-col absolute left-0 top-0 w-full py-8 px-4  ${
             isNavOpen || "hidden"
           } dark:bg-main-dark md:p-0 md:text-xl md:flex md:flex-grow 
           z-20 md:relative md:flex-row md:gap-4 md:items-center md:justify-center`}>
@@ -74,7 +83,7 @@ const Navigation = (props: Props) => {
 
           <button
             onClick={toggleDarkMode}
-            className="w-7 h-7 text-xl relative  rounded border border-black dark:border-main overflow-hidden flex flex-col items-center">
+            className="w-7 h-7 text-xl relative  rounded border border-black dark:border-main-light overflow-hidden flex flex-col items-center">
             <span
               className={`bg-main-dark text-white p-1 absolute w-full h-full top-0 left-0 transform origin-bottom-left transition-all delay-200 duration-300 ${
                 !darkMode || "-rotate-90 -translate-x-12"
@@ -82,7 +91,7 @@ const Navigation = (props: Props) => {
               <BsFillMoonFill />
             </span>
             <span
-              className={`bg-main text-main-dark p-1 absolute w-full h-full top-0 left-0 transform origin-bottom-right transition-all delay-200 duration-300 ${
+              className={`bg-main-light text-main-dark p-1 absolute w-full h-full top-0 left-0 transform origin-bottom-right transition-all delay-200 duration-300 ${
                 darkMode || "translate-x-12  rotate-90"
               }`}>
               <BsFillSunFill />

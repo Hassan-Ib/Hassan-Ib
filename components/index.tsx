@@ -5,3 +5,5 @@ export { default as Meta } from "./Meta";
 export { default as Footer } from "./Footer";
 export { default as Navigation } from "./Navigation";
 export { default as HassanProfile } from "./HassanProfile";
+export { default as SectionHeader } from "./SectionHeader";
+export { default as Project } from "./Project";

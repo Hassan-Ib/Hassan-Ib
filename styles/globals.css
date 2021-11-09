@@ -26,5 +26,29 @@ a {
 }
 
 .styled-scroll::-webkit-scrollbar-thumb {
-  @apply bg-main-dark dark:bg-main;
+  @apply bg-main-dark dark:bg-main-light;
+}
+
+.fadeout {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fadein {
+  opacity: 1;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
