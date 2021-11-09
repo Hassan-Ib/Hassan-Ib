@@ -70,7 +70,7 @@ const ToolsBadge = (props: ToolsBadgeProps) => {
 
 const About: NextPageWithLayout = () => {
   return (
-    <main className="styled-scroll h-full py-20 md:py-2 md:border border-white px-4 md:px-16 lg:px-36 overflow-y-auto">
+    <main className="styled-scroll h-full py-20 md:py-2 md:border border-main-dark dark:border-white px-4 md:px-16 lg:px-36 overflow-y-auto">
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
       <section
         aria-label="About Hassan Ibrahim | web developer"
