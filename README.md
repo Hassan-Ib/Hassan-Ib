@@ -4,7 +4,13 @@
 **Hassan-Ib/Hassan-Ib** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 -->
 
-![alt text](./public/img/About-Hassan-Ibrahim-Ayomide-Developer-Bookworm-chess-enthusiast.png)
+<!-- ![alt te](./public/img/About-Hassan-Ibrahim-Ayomide-Developer-Bookworm-chess-enthusiast.png) -->
+
+##Tools
+![javascript](./public/icon8-javascript.svg)
+![typescript](./public/icon8-typescript.svg)
+![node js](./public/icon8-nodejs.svg)
+![react](./public/icon8-react.svg)
 
 - 🔭 I’m currently working on my personal protfolio and my final year project (building a website for my faulty)...
 - 🌱 I’m currently learning Node js, MongoDB and Rest Api Architecture...
