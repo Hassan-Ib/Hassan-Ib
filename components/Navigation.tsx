@@ -43,12 +43,12 @@ const Navigation = (props: Props) => {
     <header className=" py-1 bg-main-light  dark:bg-main-dark ">
       <nav className="py-4 px-4 flex items-center justify-end">
         <div
-          className={`uppercase tracking-wide flex flex-col absolute left-0 top-0 w-full py-8 px-4  ${
+          className={`uppercase tracking-wide flex flex-col absolute left-0 top-0 w-full py-8 px-4 bg-main-light dark:bg-main-dark ${
             isNavOpen || "hidden"
           } dark:bg-main-dark md:p-0 md:text-xl md:flex md:flex-grow 
           z-20 md:relative md:flex-row md:gap-4 md:items-center md:justify-center`}>
           <NavLink href="/about">About</NavLink>
-          <NavLink href="/download-cv">download cv</NavLink>
+          <NavLink href="/blog">Blog</NavLink>
           <Link
             href="/"
             className="order-first md:order-none relative flex items-center"
@@ -62,7 +62,7 @@ const Navigation = (props: Props) => {
             />
             <span className=" md:hidden">Home</span>
           </Link>
-          <NavLink href="/about#contact">contact</NavLink>
+          <NavLink href="/download-cv">download cv</NavLink>
           <NavLink href="/playChess">Lets play</NavLink>
 
           <button

@@ -114,15 +114,24 @@ const About: NextPageWithLayout = () => {
 
         <SectionHeader>My projects</SectionHeader>
         <section className="project-grid">
-          <Project src={NetFlixClone} name="netflix-clone">
+          <Project
+            src={NetFlixClone}
+            href="https://netflix-clone-9bf8c.web.app"
+            name="netflix-clone">
             Ecommerce demo built with React, data fetching with Graph-ql from
             headless CMS Contentful
           </Project>
-          <Project src={ComfyApp} name="comfy-funiture">
+          <Project
+            src={ComfyApp}
+            href="https://silva-comfy.netlify.app"
+            name="comfy-funiture">
             Ecommerce demo built with React, data fetching with Graph-ql from
             headless CMS Contentful
           </Project>
-          <Project src={GithubUser} name="github-user-search app">
+          <Project
+            src={GithubUser}
+            href="https://silva-search-github-user.netlify.app"
+            name="github-user-search app">
             Ecommerce demo built with React, data fetching with Graph-ql from
             headless CMS Contentful
           </Project>

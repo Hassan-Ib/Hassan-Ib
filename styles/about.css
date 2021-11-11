@@ -4,3 +4,31 @@
   gap: 0.8rem;
   place-content: center;
 }
+
+.home {
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: linear-gradient(
+    to top,
+    #ffad26,
+    #ff7701,
+    #fea026,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ff8b00
+  );
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+}
+
+.glass {
+  background-color: #ffffff;
+  opacity: 0.8;
+  /* border: 1px solid #fff; */
+  border-radius: 15px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  width: 370px;
+  background-clip: padd;
+}
