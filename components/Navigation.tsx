@@ -48,7 +48,7 @@ const Navigation = (props: Props) => {
           } dark:bg-main-dark md:p-0 md:text-xl md:flex md:flex-grow 
           z-20 md:relative md:flex-row md:gap-4 md:items-center md:justify-center`}>
           <NavLink href="/about">About</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
+          {/* <NavLink href="/blog">Blog</NavLink> */}
           <Link
             href="/"
             className="order-first md:order-none relative flex items-center"
@@ -63,7 +63,7 @@ const Navigation = (props: Props) => {
             <span className=" md:hidden">Home</span>
           </Link>
           <NavLink href="/download-cv">download cv</NavLink>
-          <NavLink href="/playChess">Lets play</NavLink>
+          {/* <NavLink href="/playChess">Lets play</NavLink> */}
 
           <button
             onClick={openNav}

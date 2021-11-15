@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import NextLink from "next/link";
 import React, { ReactElement, ReactNode } from "react";
 import {
   Container,
@@ -78,9 +79,9 @@ const About: NextPageWithLayout = () => {
         <HassanProfile />
         <section>
           <SectionHeader>A bit about me </SectionHeader>
-          <h5 className="my-3"> Hey there! 🧡</h5>
+          <h5 className="my-3"> Hey there! 👋</h5>
           <p className="my-3">
-            👋 My name is Hassan Ibrahim and welcome to my personal website. I’m
+            🧡 My name is Hassan Ibrahim and welcome to my personal website. I’m
             a Web Developer from Nigeria and a Computer Science graduate. I’d
             like to be a Fullstack Developer but i currrently specialize in
             Frontend Development. I’m a lifetime code hobbyist passionate about
@@ -89,8 +90,12 @@ const About: NextPageWithLayout = () => {
           </p>
           <p className="my-3">
             I’m Looking to be part of Engineering teams in Agile and Innovative
-            Technology companies. Got any exciting opportunities? kindley
-            contact me 😎 .
+            Technology companies,I’m a proactive team player, who likes
+            challenges, achieving goals and learning new things. Got any
+            exciting opportunities? kindley{" "}
+            <NextLink href="" passHref>
+              <a className="underline"> contact me 😎</a>
+            </NextLink>{" "}
           </p>
           <p>
             In my limited free time, i try to keep up with new technologies and
@@ -118,22 +123,20 @@ const About: NextPageWithLayout = () => {
             src={NetFlixClone}
             href="https://netflix-clone-9bf8c.web.app"
             name="netflix-clone">
-            Ecommerce demo built with React, data fetching with Graph-ql from
-            headless CMS Contentful
+            Netflix clone built with React, Axios and TMDB API
           </Project>
           <Project
             src={ComfyApp}
             href="https://silva-comfy.netlify.app"
             name="comfy-funiture">
-            Ecommerce demo built with React, data fetching with Graph-ql from
+            Ecommerce built with React, data fetching with Graph-ql from
             headless CMS Contentful
           </Project>
           <Project
             src={GithubUser}
             href="https://silva-search-github-user.netlify.app"
             name="github-user-search app">
-            Ecommerce demo built with React, data fetching with Graph-ql from
-            headless CMS Contentful
+            Github user search app with React, github REST API and Fusion Charts
           </Project>
         </section>
       </section>
