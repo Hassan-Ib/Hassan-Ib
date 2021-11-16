@@ -22,7 +22,7 @@ const About: NextPageWithLayout = () => {
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
       <section
         aria-label="About Hassan Ibrahim | web developer"
-        className=" md:text-lg flex flex-col md:flex-row md:gap-20 items-center md:px-12">
+        className=" md:text-lg flex flex-col md:flex-row md:gap-20 items-center md:px-10">
         <HassanProfile />
         <section>
           <SectionHeader>A bit about me </SectionHeader>
