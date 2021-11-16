@@ -9,7 +9,7 @@ interface Props {
 
 const Layout = (props: Props) => {
   return (
-    <div className=" fixed inset-0 flex flex-col  bg-main-light dark:bg-main-dark text-primary-black dark:text-primary-white">
+    <div className="fixed inset-0 flex flex-col  bg-main-light dark:bg-main-dark text-primary-black dark:text-primary-white font-light md:font-medium">
       <Navigation />
       <Container>{props.children}</Container>
       <Footer />

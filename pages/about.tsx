@@ -22,7 +22,7 @@ const About: NextPageWithLayout = () => {
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
       <section
         aria-label="About Hassan Ibrahim | web developer"
-        className=" md:text-lg flex flex-col md:flex-row md:gap-20 items-center">
+        className=" md:text-lg flex flex-col md:flex-row md:gap-20 items-center md:px-12">
         <HassanProfile />
         <section>
           <SectionHeader>A bit about me </SectionHeader>
@@ -38,16 +38,46 @@ const About: NextPageWithLayout = () => {
           <p className="my-3">
             I’m Looking to be part of Engineering teams in Agile and Innovative
             Technology companies,I’m a proactive team player, who likes
-            challenges, achieving goals and learning new things. Got any
-            exciting opportunities? kindley{" "}
-            <NextLink href="" passHref>
-              <a className="underline"> contact me 😎</a>
-            </NextLink>{" "}
+            challenges, achieving goals and learning new things.
           </p>
-          <p>
+          <p className="py-3">
             In my limited free time, i try to keep up with new technologies and
             work on side projects to better under the technologies that i use.
             below are the side projects that i’ve built while learning .
+          </p>
+
+          <p>
+            Got any exciting opportunities?, You can reach or catch up with me
+            on{" "}
+            <NextLink href="https://twitter.com/Azanebrahim" passHref>
+              <a
+                className="underline"
+                target="_blank"
+                rel="onopener noreferrer">
+                Twitter
+              </a>
+            </NextLink>
+            ,{" "}
+            <NextLink
+              href="https://facebook.com/profile.php?id=100050198353049"
+              passHref>
+              <a
+                className="underline"
+                target="_blank"
+                rel="onopener noreferrer">
+                Facebook
+              </a>
+            </NextLink>{" "}
+            and{" "}
+            <NextLink href="https:/instagram.com/darealazan" passHref>
+              <a
+                className="underline"
+                target="_blank"
+                rel="onopener noreferrer">
+                Instagram
+              </a>
+            </NextLink>
+            .
           </p>
         </section>
       </section>

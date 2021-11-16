@@ -9,7 +9,7 @@ const Container = ({
 }) => {
   return (
     <section
-      className={`container styled-scroll m-auto flex-1 overflow-auto md:border border-main-dark dark:border-white`}>
+      className={`container styled-scroll m-auto flex-1 overflow-auto md:border border-main-dark dark:border-white `}>
       {children}
     </section>
   );
