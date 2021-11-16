@@ -40,10 +40,10 @@ const Navigation = (props: Props) => {
   }, [pathname]);
 
   return (
-    <header className=" py-1 bg-main-light  dark:bg-main-dark ">
+    <header className=" py-1 bg-main-light  dark:bg-main-dark font-light md:font-normal ">
       <nav className="py-4 px-4 flex items-center justify-end">
         <div
-          className={`uppercase tracking-wide flex flex-col absolute left-0 top-0 w-full py-8 px-4 bg-main-light dark:bg-main-dark ${
+          className={`uppercase tracking-wide absolute left-0 top-0 w-full flex flex-col gap-2 py-8 px-4 bg-main-light dark:bg-main-dark ${
             isNavOpen || "hidden"
           } dark:bg-main-dark md:p-0 md:text-xl md:flex md:flex-grow 
           z-20 md:relative md:flex-row md:gap-4 md:items-center md:justify-center`}>
@@ -53,7 +53,7 @@ const Navigation = (props: Props) => {
             href="/"
             className="order-first md:order-none relative flex items-center"
             ariaLabel="Click to go back to homepage">
-            <div className="absolute w-10  h-10  top-4  border border-main-dark dark:border-white transform origin-right rotate-45" />
+            <div className="absolute w-10 h-10 top-4 border border-main-dark dark:border-white transform origin-right rotate-45" />
             <Image
               src={Logo}
               alt="Hassan logo | home Logo"
