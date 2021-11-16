@@ -15,7 +15,7 @@ const Home: NextPageWithLayout = () => {
   // console.log(pathname);
 
   return (
-    <main className="h-full pt-6 px-4 flex flex-col md:flex-row md:items-center md:justify-around font-normal">
+    <main className="h-full pt-6 px-4 flex flex-col md:flex-row md:items-center md:justify-around ">
       <Meta title="Hassan Ibrahim Ayomide" />
 
       {/* image and name*/}
@@ -29,7 +29,7 @@ const Home: NextPageWithLayout = () => {
 
       {/* links */}
 
-      <section className="text-3xl text-right md:text-4xl flex flex-col self-end md:self-auto gap-2 lg:text-5xl md:gap-8 ">
+      <section className="text-3xl text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
         <span className="underline">
           <Link href="/about">Web developer </Link>
         </span>
