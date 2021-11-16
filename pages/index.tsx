@@ -11,14 +11,11 @@ type NextPageWithLayout = NextPage & {
 };
 
 const Home: NextPageWithLayout = () => {
-  const { pathname } = useRouter();
-  console.log(pathname);
+  // const { pathname } = useRouter();
+  // console.log(pathname);
 
   return (
-    <main
-      className={`fadeout ${
-        pathname === "/" && "fadein"
-      } pt-12 px-4  flex flex-col md:flex-row md:items-center md:justify-around md:border border-main-dark dark:border-white h-full styled-scroll overflow-y-auto`}>
+    <main className="h-full pt-12 px-4 flex flex-col md:flex-row md:items-center md:justify-around">
       <Meta title="Hassan Ibrahim Ayomide" />
 
       {/* image and name*/}
@@ -50,10 +47,6 @@ const Home: NextPageWithLayout = () => {
   );
 };
 
-Home.getLayout = (page: React.ReactElement) => (
-  <Layout>
-    <Container>{page}</Container>
-  </Layout>
-);
+Home.getLayout = (page: React.ReactElement) => <Layout>{page}</Layout>;
 
 export default Home;

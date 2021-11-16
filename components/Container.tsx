@@ -1,10 +1,17 @@
 import React from "react";
 
-const Container = ({ children }: { children: React.ReactNode }) => {
+const Container = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <div className={`md:container m-auto h-full w-full overflow-y-auto `}>
+    <section
+      className={`container styled-scroll m-auto flex-1 overflow-auto md:border border-main-dark dark:border-white`}>
       {children}
-    </div>
+    </section>
   );
 };
 

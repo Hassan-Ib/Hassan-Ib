@@ -5,10 +5,6 @@ import { ImTwitter } from "react-icons/im";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { SiLichess } from "react-icons/si";
 
-type Props = {
-  className?: string;
-};
-
 const Social = (props: LinkProps & { linkTo: string }) => {
   return (
     <Link
@@ -20,7 +16,7 @@ const Social = (props: LinkProps & { linkTo: string }) => {
   );
 };
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <footer className="relative z-20 p-2 pt-4 md:pt-8 flex flex-col justify-center items-center ">
       <div
@@ -50,8 +46,7 @@ const Footer = (props: Props) => {
         </Social>
       </div>
 
-      <div
-        className={`${props.className} py-1 w-full text-xs text-center  bg-main-light dark:bg-main-dark`}>
+      <div className="py-1 w-full text-xs text-center  bg-main-light dark:bg-main-dark">
         Design inspired by
         <Link href="https://mayashavin.com" className="underline px-1">
           Maya Shavin

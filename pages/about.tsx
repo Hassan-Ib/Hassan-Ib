@@ -2,76 +2,23 @@ import type { NextPage } from "next";
 import NextLink from "next/link";
 import React, { ReactElement, ReactNode } from "react";
 import {
-  Container,
   Layout,
   Meta,
   HassanProfile,
   SectionHeader,
   Project,
+  ToolsBadge,
 } from "../components";
-import JavaScriptSvg from "../public/icons8-javascript.svg";
-import TypeScriptSvg from "../public/icons8-typescript.svg";
-import ReduxSvg from "../public/icons8-redux.svg";
-import SassSvg from "../public/icons8-sass.svg";
-import ReactSvg from "../public/icons8-react.svg";
-import NodeSvg from "../public/icons8-nodejs.svg";
-import Image, { ImageProps } from "next/image";
-import NetFlixClone from "../public/img/netflix-clone.png";
-import GithubUser from "../public/img/Github-User.png";
-import ComfyApp from "../public/img/Comfy-App.png";
-
-type tool = ImageProps & { toolName: string };
-
-const tools: tool[] = [
-  {
-    src: JavaScriptSvg,
-    toolName: "javascript",
-  },
-  {
-    src: TypeScriptSvg,
-    toolName: "typeScript",
-  },
-  {
-    src: ReactSvg,
-    toolName: "react js",
-  },
-  {
-    src: NodeSvg,
-    toolName: "node js",
-  },
-  {
-    src: ReduxSvg,
-    toolName: "redux",
-  },
-  {
-    src: SassSvg,
-    toolName: "Scss",
-  },
-];
+import tools from "../utils/tools";
+import projects from "../utils/projects";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
-type ToolsBadgeProps = ImageProps & {
-  toolName: string;
-};
-
-const ToolsBadge = (props: ToolsBadgeProps) => {
-  return (
-    <div className="relative w-14 h-14">
-      <Image
-        src={props.src}
-        alt={`${props.toolName} icons`}
-        layout="responsive"
-      />
-    </div>
-  );
-};
-
 const About: NextPageWithLayout = () => {
   return (
-    <main className="styled-scroll h-full py-20 md:py-2 md:border border-main-dark dark:border-white px-4 md:px-16 lg:px-36 overflow-y-auto">
+    <main className="py-20 md:py-2 px-4 md:px-16 lg:px-36">
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
       <section
         aria-label="About Hassan Ibrahim | web developer"
@@ -109,45 +56,24 @@ const About: NextPageWithLayout = () => {
         <section
           aria-label="Hassan Ibrahim development tools || web developer"
           className="flex justify-center items-center gap-3">
-          <ToolsBadge src={JavaScriptSvg} toolName="javascript" />
-          <ToolsBadge src={TypeScriptSvg} toolName="typescript" />
-          <ToolsBadge src={ReactSvg} toolName="react js" />
-          <ToolsBadge src={NodeSvg} toolName="node js" />
-          <ToolsBadge src={ReduxSvg} toolName="redux" />
-          <ToolsBadge src={SassSvg} toolName="sass" />
+          {tools.map((el, index) => (
+            <ToolsBadge key={index} src={el.src} toolName={el.toolName} />
+          ))}
         </section>
 
         <SectionHeader>My projects</SectionHeader>
         <section className="project-grid">
-          <Project
-            src={NetFlixClone}
-            href="https://netflix-clone-9bf8c.web.app"
-            name="netflix-clone">
-            Netflix clone built with React, Axios and TMDB API
-          </Project>
-          <Project
-            src={ComfyApp}
-            href="https://silva-comfy.netlify.app"
-            name="comfy-funiture">
-            Ecommerce built with React, data fetching with Graph-ql from
-            headless CMS Contentful
-          </Project>
-          <Project
-            src={GithubUser}
-            href="https://silva-search-github-user.netlify.app"
-            name="github-user-search app">
-            Github user search app with React, github REST API and Fusion Charts
-          </Project>
+          {projects.map((el, index) => (
+            <Project key={index} href={el.href} src={el.src} name={el.name}>
+              {el.desc}
+            </Project>
+          ))}
         </section>
       </section>
     </main>
   );
 };
 
-About.getLayout = (page) => (
-  <Layout>
-    <Container>{page}</Container>
-  </Layout>
-);
+About.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default About;
