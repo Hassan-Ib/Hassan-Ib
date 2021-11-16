@@ -7,3 +7,4 @@ export { default as Navigation } from "./Navigation";
 export { default as HassanProfile } from "./HassanProfile";
 export { default as SectionHeader } from "./SectionHeader";
 export { default as Project } from "./Project";
+export { default as ToolsBadge } from "./ToolsBadge";

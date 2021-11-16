@@ -1,6 +1,12 @@
 module.exports = {
-  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   darkMode: "class",
+  purge: {
+    enabled: true,
+    content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+    options: {
+      safelist: ["dark"],
+    },
+  },
   theme: {
     extend: {
       colors: {

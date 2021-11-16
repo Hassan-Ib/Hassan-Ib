@@ -4,10 +4,7 @@ import { VscGithub } from "react-icons/vsc";
 import { ImTwitter } from "react-icons/im";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { SiLichess } from "react-icons/si";
-
-type Props = {
-  className?: string;
-};
+import NextLink from "next/link";
 
 const Social = (props: LinkProps & { linkTo: string }) => {
   return (
@@ -20,7 +17,7 @@ const Social = (props: LinkProps & { linkTo: string }) => {
   );
 };
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <footer className="relative z-20 p-2 pt-4 md:pt-8 flex flex-col justify-center items-center ">
       <div
@@ -51,11 +48,17 @@ const Footer = (props: Props) => {
       </div>
 
       <div
-        className={`${props.className} py-1 w-full text-xs text-center  bg-main-light dark:bg-main-dark`}>
+        className="py-1 w-full text-xs font-normal md:font-medium text-center bg-main-light dark:bg-main-dark"
+        style={{ fontSize: "0.7rem" }}>
         Design inspired by
-        <Link href="https://mayashavin.com" className="underline px-1">
-          Maya Shavin
-        </Link>{" "}
+        <NextLink href="https://mayashavin.com" passHref>
+          <a
+            className="underline px-1"
+            rel="noopener noreferrer"
+            target="_blank">
+            Maya Shavin
+          </a>
+        </NextLink>
         & Developed by Hassan Ibrahim with 🧡 - © 2021
       </div>
     </footer>

@@ -1,6 +1,5 @@
 import React from "react";
 import Image, { ImageProps } from "next/image";
-import Link, { LinkProps } from "./Link";
 import NextLink, { LinkProps as NextLinkProps } from "next/link";
 
 const Project = ({
@@ -10,7 +9,7 @@ const Project = ({
   href,
 }: ImageProps & NextLinkProps & { name: string }) => {
   return (
-    <div className="shadow-xl bg-card-light dark:bg-card-dark rounded overflow-hidden">
+    <div className="shadow-2xl bg-card-light dark:bg-card-dark rounded-sm overflow-hidden border border-main-dark ">
       <div className="relative block w-full h-48  overflow-hidden hover:opacity-80 transition-all">
         <Image
           src={src}
@@ -20,8 +19,8 @@ const Project = ({
           objectPosition="center"
         />
       </div>
-      <div className="py-6 px-4 text-sm">
-        <NextLink href={href}>
+      <div className="py-4 px-4 text-sm">
+        <NextLink href={href} passHref>
           <a
             target="_blank"
             rel="noopener noreferrer"
