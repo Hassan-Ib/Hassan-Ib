@@ -15,7 +15,7 @@
 - 😄 Pronouns: HE/HIM...
 - ⚡ Fun fact: I'm really curious about everything...
 
-## Tools
+<!-- ## Tools -->
 
 <!-- ![javascript](./public/icons8-javascript.svg)
 ![typescript](./public/icons8-typescript.svg)
