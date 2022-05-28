@@ -15,7 +15,7 @@ const Home: NextPageWithLayout = () => {
   // console.log(pathname);
 
   return (
-    <main className="h-full pt-6 px-4 flex flex-col md:flex-row md:items-center md:justify-around ">
+    <main className="h-full py-6 px-4 flex flex-col justify-between md:flex-row md:items-center md:justify-around ">
       <Meta title="Hassan Ibrahim Ayomide" />
 
       {/* image and name*/}
@@ -23,13 +23,15 @@ const Home: NextPageWithLayout = () => {
       <section className=" flex flex-col self-start md:self-auto items-center ">
         <HassanProfile />
         <div className="my-8  md:my-10">
-          <h2 className="text-2xl  tracking-wide">Hi, my name is Ibrahim.</h2>
+          <h1 className="text-2xl font-semibold tracking-wide">
+            Hi, Ibrahim here <span className=" animate-bounce ">👋</span>.
+          </h1>
         </div>
       </section>
 
       {/* links */}
 
-      <section className="text-3xl text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
+      <section className="text-4xl font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
         <span className="underline">
           <Link href="/about">Web developer </Link>
         </span>

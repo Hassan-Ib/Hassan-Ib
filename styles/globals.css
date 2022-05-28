@@ -9,7 +9,7 @@
 }
 
 .styled-scroll::-webkit-scrollbar-thumb {
-  @apply bg-main-dark dark:bg-main-light;
+  @apply bg-main-dark dark:bg-main-light-100;
 }
 
 .project-grid {
@@ -17,4 +17,10 @@
   grid-template-columns: repeat(auto-fit, minmax(270px, 300px));
   gap: 1rem;
   place-content: center;
+}
+
+@layer utilities {
+  .test-border {
+    border: 1px solid red;
+  }
 }

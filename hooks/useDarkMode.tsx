@@ -1,5 +1,7 @@
 import React from "react";
 
+const IS_DARK_MODE = "dark";
+
 export default function useDarkMode() {
   const [darkMode, setDarkMode] = React.useState<boolean>(false);
 
@@ -13,22 +15,16 @@ export default function useDarkMode() {
     }
   };
 
-  const getTheme = (): boolean =>
-    window.localStorage.theme === "dark" ||
-    window.matchMedia("(prefers-color-scheme : dark)").matches
-      ? true
-      : false;
+  React.useEffect(() => {
+    const isDarkTheme = (): boolean =>
+      window.localStorage.theme === IS_DARK_MODE;
+
+    setDarkMode(isDarkTheme);
+  }, [darkMode]);
 
   React.useEffect(() => {
-    setDarkMode(getTheme);
-  }, []);
-
-  React.useEffect(() => {
-    // console.log(localStorage.theme);
     let root = window.document.documentElement;
     darkMode ? root.classList.add("dark") : root.classList.remove("dark");
-
-    // console.log(root.className);
   }, [darkMode]);
 
   return { darkMode, toggleDarkMode };
