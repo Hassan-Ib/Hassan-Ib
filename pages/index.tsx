@@ -27,7 +27,7 @@ const Home: NextPageWithLayout = () => {
         {/* <button className="btn px-2 py-4 text-xl">Resume</button> */}
       </section>
 
-      <section className="text-4xl font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
+      <section className="text-3xl font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
         <span className="underline">
           <Link href="/about">Web developer </Link>
         </span>
