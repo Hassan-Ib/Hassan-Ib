@@ -5,7 +5,7 @@ import { IconReact } from "./Icon";
 const HassanProfile = () => {
   return (
     <div className="relative ">
-      <div className="relative rounded-full w-40 h-40 md:w-60 md:h-60 overflow-hidden">
+      <div className="relative rounded-full w-48 h-48 md:w-60 md:h-60 overflow-hidden">
         <Image
           src={
             "https://avatars.githubusercontent.com/u/53692907?s=400&u=1c19cef9caad448f9565a4b4431ab88e99baaee3&v=4"
