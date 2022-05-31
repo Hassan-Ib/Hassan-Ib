@@ -1,9 +1,9 @@
 import React from "react";
-import { useDarkMode } from "../hooks";
+import { useDarkModeCtx } from "../context/DarkModeCtx";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 export function DarkMode() {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { darkMode, toggleDarkMode } = useDarkModeCtx();
   return (
     <button
       onClick={toggleDarkMode}
@@ -17,7 +17,7 @@ export function DarkMode() {
         <BsFillMoonFill />
       </span>
       <span
-        className={`bg-main-light-100 text-main-dark p-1 absolute w-full h-full top-0 left-0 transform origin-bottom-right transition-all delay-100 duration-300 ${
+        className={`bg-main-100 text-main-dark p-1 absolute w-full h-full top-0 left-0 transform origin-bottom-right transition-all delay-100 duration-300 ${
           darkMode || "translate-x-12  rotate-90"
         }`}
       >

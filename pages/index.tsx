@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import React, { ReactElement, ReactNode } from "react";
-import { Container, Layout, Meta, HassanProfile } from "../components";
-import Image from "next/image";
-import HassanImage from "./../public/img/profile 1.jpg";
+import { Layout, Meta, HassanProfile, Navigation } from "../components";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -15,21 +12,20 @@ const Home: NextPageWithLayout = () => {
   // console.log(pathname);
 
   return (
-    <main className="h-full py-6 px-4 flex flex-col justify-between md:flex-row md:items-center md:justify-around ">
+    <main className=" h-full py-6 px-4 flex flex-col justify-around md:flex-row md:items-center md:justify-around ">
       <Meta title="Hassan Ibrahim Ayomide" />
-
-      {/* image and name*/}
-
-      <section className=" flex flex-col self-start md:self-auto items-center ">
+      <section className=" flex flex-col self-start md:self-auto items-start">
         <HassanProfile />
-        <div className="my-8  md:my-10">
+        <div className="my-8  md:my-10 font-barlow tracking-widest">
           <h1 className="text-2xl font-semibold tracking-wide">
-            Hi, Ibrahim here <span className=" animate-bounce ">👋</span>.
+            Hi <span className=" wave ">👋</span>, my name is <br />
+            <span className="text-7xl text-[#0a192f] dark:text-main-light">
+              Hassan Ibrahim.
+            </span>
           </h1>
         </div>
+        <button className="btn px-2 py-4 text-xl">Resume</button>
       </section>
-
-      {/* links */}
 
       <section className="text-4xl font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
         <span className="underline">
