@@ -19,12 +19,12 @@ const Home: NextPageWithLayout = () => {
         <div className="my-8  md:my-10 font-barlow tracking-widest">
           <h1 className="text-2xl font-semibold tracking-wide">
             Hi <span className=" wave ">👋</span>, my name is <br />
-            <span className="text-7xl text-[#0a192f] dark:text-main-light">
+            <span className="text-5xl md:text-7xl text-[#0a192f] dark:text-main-light">
               Hassan Ibrahim.
             </span>
           </h1>
         </div>
-        <button className="btn px-2 py-4 text-xl">Resume</button>
+        {/* <button className="btn px-2 py-4 text-xl">Resume</button> */}
       </section>
 
       <section className="text-4xl font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">

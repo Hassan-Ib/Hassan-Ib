@@ -48,10 +48,10 @@ const Social = (props: LinkProps & { linkTo: string }) => {
 
 const Footer = () => {
   return (
-    <footer className=" ">
+    <footer className=" font-barlow  flex flex-col justify-center items-center">
       <ul
         aria-label="social media icons"
-        className="fixed bottom-6 left-6 z-20 flex flex-col gap-5 max-w-fit mb-1 text-lg md:text-xl dark:text-white before-stroke after-stroke"
+        className=" md:fixed bottom-6 left-6 z-20 flex md:flex-col gap-5 max-w-fit mb-4 text-2xl dark:text-white before-stroke after-stroke"
       >
         {socialsInfo.map((social, index) => (
           <Social
@@ -65,10 +65,7 @@ const Footer = () => {
         ))}
       </ul>
 
-      <div
-        className=" bg-red-500 px-4 rounded-sm max-w-fit fixed bottom-0 z-20 right-8 py-1 w-full text-xs font-normal md:font-medium text-center"
-        style={{ fontSize: "0.7rem" }}
-      >
+      <div className=" md:bg-red-700 md:text-white md:dark:bg-red-500 px-4 rounded-sm max-w-fit md:fixed bottom-0 z-20 right-8 py-1 w-full text-xs tracking-wider font-medium text-center">
         Design inspired by
         <NextLink href="https://mayashavin.com" passHref>
           <a
@@ -79,7 +76,7 @@ const Footer = () => {
             Maya Shavin
           </a>
         </NextLink>
-        & Developed by Hassan Ibrahim with 🧡 - © 2021
+        & <br /> Developed by Hassan Ibrahim with 🧡 - © 2021
       </div>
     </footer>
   );
