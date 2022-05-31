@@ -17,7 +17,7 @@ const Home: NextPageWithLayout = () => {
       <section className=" flex flex-col self-start md:self-auto items-start">
         <HassanProfile />
         <div className="my-8  md:my-10 font-barlow tracking-widest">
-          <h1 className="text-2xl font-semibold tracking-wide">
+          <h1 className="text-xl md:text-2xl font-semibold tracking-wide">
             Hi <span className=" wave ">👋</span>, my name is <br />
             <span className="text-5xl md:text-7xl text-[#0a192f] dark:text-main-light">
               Hassan Ibrahim.
@@ -27,7 +27,7 @@ const Home: NextPageWithLayout = () => {
         {/* <button className="btn px-2 py-4 text-xl">Resume</button> */}
       </section>
 
-      <section className="text-3xl font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
+      <section className="text-3xl font-normal md:font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
         <span className="underline">
           <Link href="/about">Web developer </Link>
         </span>
