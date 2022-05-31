@@ -9,7 +9,7 @@
 }
 
 .styled-scroll::-webkit-scrollbar-thumb {
-  @apply bg-main-dark dark:bg-main-light-100;
+  @apply bg-main-dark dark:bg-main-light;
 }
 
 .project-grid {
@@ -22,5 +22,53 @@
 @layer utilities {
   .test-border {
     border: 1px solid red;
+  }
+  .wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .before-stroke::before {
+    content: " ";
+    position: absolute;
+    @apply bg-main-dark dark:bg-white h-10 w-[1px] -top-16 left-1/2;
+  }
+  .after-stroke::after {
+    content: " ";
+    position: absolute;
+    @apply bg-main-dark dark:bg-white h-10 w-[1px] -bottom-14 left-1/2 -translate-x-1/2;
+  }
+  .btn {
+    @apply border border-black dark:border-main-100 font-medium font-barlow tracking-wider px-6 py-1 rounded-md capitalize hover:bg-main-100/20;
   }
 }

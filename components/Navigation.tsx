@@ -5,7 +5,8 @@ import { useRouter } from "next/router";
 import { NavLink } from "./NavLink";
 import { DarkMode } from "./DarkMode";
 import Link from "./Link";
-import Image from "next/image";
+import Logo from "./Logo";
+// import Image from "next/image";
 
 const navlinks = [
   {
@@ -41,35 +42,27 @@ const Navigation = (props: Props) => {
 
   return (
     <header className=" py-1 bg-main-light  dark:bg-main-dark ">
-      <nav className="py-4 px-4 flex items-center justify-end">
-        <Link href="/" className="flex items-center gap-2 flex-1">
-          <div className="relative rounded-full border-2 h-10 w-10 border-card-dark dark:border-main-light overflow-hidden">
-            <Image
-              src="https://avatars.githubusercontent.com/u/53692907?s=400&u=1c19cef9caad448f9565a4b4431ab88e99baaee3&v=4"
-              alt="hassan image"
-              // className="rounded-full "
-              layout="fill"
-              // objectFit="cover"
+      <nav className="py-4 px-4 flex items-center ">
+        <div className="flex-1">
+          <Link href="/">
+            <Logo />
+          </Link>
+        </div>
 
-              // objectPosition="center"
-              // height="40"
-              // width="40"
-            />
-          </div>
-          {/* <span className="">🔯</span> */}
-          {/* <span className="font-bold">HI </span>{" "} */}
-        </Link>
         <ul
-          className={` capitalize tracking-wide absolute left-0 top-0 w-full flex flex-col gap-2  py-8 px-4 bg-main-light dark:bg-main-dark ${
+          className={`  capitalize tracking-wide absolute left-0 top-0 w-full flex flex-col gap-2  py-8 px-4 bg-main-light dark:bg-main-dark ${
             isNavOpen || "hidden"
           } dark:bg-main-dark md:p-0 md:flex md:flex-1 
           z-20 md:relative md:flex-row md:gap-4 md:items-center md:justify-end`}
         >
           {navlinks.map((navlink, index) => (
             <li key={index}>
-              <NavLink href={navlink.href}>
-                {" "}
-                <span>0{index + 1}</span>. {navlink.text}
+              <NavLink
+                href={navlink.href}
+                closeNav={() => setIsNavOpen(false)}
+                index={index}
+              >
+                {navlink.text}
               </NavLink>
             </li>
           ))}
@@ -82,7 +75,7 @@ const Navigation = (props: Props) => {
             <MdClose />
           </button>
         </ul>
-        <button className=" mx-6 border border-main-dark dark:border-main-light-100 px-6 py-2 rounded-md capitalize">
+        <button className="mx-6 border border-black dark:border-main-100 font-medium font-barlow tracking-wider px-6 py-1 rounded-md capitalize hover:bg-main-100/20">
           resume
         </button>
 

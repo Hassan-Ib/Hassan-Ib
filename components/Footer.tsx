@@ -6,12 +6,41 @@ import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { SiLichess } from "react-icons/si";
 import NextLink from "next/link";
 
+const socialsInfo = [
+  {
+    linkTo: "github",
+    href: "https://github.com/Hassan-Ib",
+    icon: <VscGithub />,
+  },
+  {
+    linkTo: "twitter",
+    href: "https://twitter.com/Azanebrahim",
+    icon: <ImTwitter />,
+  },
+  {
+    linkTo: "LinkedIn",
+    href: "https://www.linkedin.com/in/hassan-ib",
+    icon: <FaLinkedinIn />,
+  },
+  {
+    linkTo: "facebook",
+    href: "https://facebook.com/profile.php?id=100050198353049",
+    icon: <FaFacebookF />,
+  },
+  {
+    linkTo: "lichess",
+    href: "https://lichess.org/@/Hassan-Ib",
+    icon: <SiLichess />,
+  },
+];
+
 const Social = (props: LinkProps & { linkTo: string }) => {
   return (
     <Link
       className={props.className}
       href={props.href}
-      ariaLabel={`Hassan Ibrahim | Developer | ${props.linkTo} link`}>
+      ariaLabel={`Hassan Ibrahim | Developer | ${props.linkTo} link`}
+    >
       {props.children}
     </Link>
   );
@@ -19,43 +48,34 @@ const Social = (props: LinkProps & { linkTo: string }) => {
 
 const Footer = () => {
   return (
-    <footer className="relative z-20 p-2 pt-4 md:pt-8 flex flex-col justify-center items-center ">
-      <div
+    <footer className=" ">
+      <ul
         aria-label="social media icons"
-        className="flex justify-center gap-6 mb-1 text-xl md:text-2xl dark:text-white">
-        <Social href="https://github.com/Hassan-Ib" linkTo="github">
-          <VscGithub />
-        </Social>
-
-        <Social href="https://twitter.com/Azanebrahim" linkTo="twitter">
-          <ImTwitter />
-        </Social>
-
-        <Social href="https://www.linkedin.com/in/hassan-ib" linkTo="LinkedIn">
-          <FaLinkedinIn />
-        </Social>
-        <Social
-          href="https://facebook.com/profile.php?id=100050198353049"
-          linkTo="facebook">
-          <FaFacebookF />
-        </Social>
-        <Social
-          href="https://twitter.com/Azanebrahim"
-          linkTo="lichess"
-          className="">
-          <SiLichess />
-        </Social>
-      </div>
+        className="fixed bottom-6 left-6 z-20 flex flex-col gap-5 max-w-fit mb-1 text-lg md:text-xl dark:text-white before-stroke after-stroke"
+      >
+        {socialsInfo.map((social, index) => (
+          <Social
+            key={index}
+            href={social.href}
+            className=""
+            linkTo={social.linkTo}
+          >
+            {social.icon}
+          </Social>
+        ))}
+      </ul>
 
       <div
-        className="py-1 w-full text-xs font-normal md:font-medium text-center bg-main-light dark:bg-main-dark"
-        style={{ fontSize: "0.7rem" }}>
+        className=" bg-red-500 px-4 rounded-sm max-w-fit fixed bottom-0 z-20 right-8 py-1 w-full text-xs font-normal md:font-medium text-center"
+        style={{ fontSize: "0.7rem" }}
+      >
         Design inspired by
         <NextLink href="https://mayashavin.com" passHref>
           <a
             className="underline px-1"
             rel="noopener noreferrer"
-            target="_blank">
+            target="_blank"
+          >
             Maya Shavin
           </a>
         </NextLink>
