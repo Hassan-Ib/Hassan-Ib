@@ -4,28 +4,29 @@ import { VscGithub } from "react-icons/vsc";
 import { ImTwitter } from "react-icons/im";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { SiLichess } from "react-icons/si";
+import { FiGithub, FiTwitter, FiLinkedin, FiFacebook } from "react-icons/fi";
 import NextLink from "next/link";
 
 const socialsInfo = [
   {
     linkTo: "github",
     href: "https://github.com/Hassan-Ib",
-    icon: <VscGithub />,
+    icon: <FiGithub />,
   },
   {
     linkTo: "twitter",
     href: "https://twitter.com/Azanebrahim",
-    icon: <ImTwitter />,
+    icon: <FiTwitter />,
   },
   {
     linkTo: "LinkedIn",
     href: "https://www.linkedin.com/in/hassan-ib",
-    icon: <FaLinkedinIn />,
+    icon: <FiLinkedin />,
   },
   {
     linkTo: "facebook",
     href: "https://facebook.com/profile.php?id=100050198353049",
-    icon: <FaFacebookF />,
+    icon: <FiFacebook />,
   },
   {
     linkTo: "lichess",
@@ -65,7 +66,7 @@ const Footer = () => {
         ))}
       </ul>
 
-      <div className=" md:bg-red-700 md:text-white md:dark:bg-red-500 px-4 rounded-sm max-w-fit md:fixed bottom-0 z-20 right-8 py-1 w-full text-xs tracking-wider font-medium text-center">
+      <div className=" opacity-70 md:bg-red-700 md:text-white md:dark:bg-red-500 px-4 rounded-sm max-w-fit md:fixed bottom-0 z-20 right-8 py-1 w-full text-xs tracking-wider font-medium text-center">
         Design inspired by
         <NextLink href="https://mayashavin.com" passHref>
           <a
