@@ -5,7 +5,7 @@ type DarkMode = {
   toggleDarkMode: () => void;
 };
 
-const DarkModeCtx = createContext<Partial<DarkMode>>({ darkMode: false });
+const DarkModeCtx = createContext<Partial<DarkMode>>({ darkMode: true });
 type DarkProps = {
   children: React.ReactNode;
 };

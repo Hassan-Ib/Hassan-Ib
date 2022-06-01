@@ -1,7 +1,7 @@
 import React from "react";
 import type { ReactElement } from "react";
-import Navigation from "./Navigation";
-import Footer from "./Footer";
+import Navigation from "./Navigation/Navigation";
+import Footer from "./Footer/Footer";
 import Container from "./Container";
 interface Props {
   children: ReactElement;
@@ -9,7 +9,7 @@ interface Props {
 
 const Layout = (props: Props) => {
   return (
-    <div className="fixed inset-0 flex flex-col bg-main-light dark:bg-main-dark  text-black dark:text-primary-white">
+    <div className="fixed inset-0 flex flex-col">
       <Navigation />
       <Container>{props.children}</Container>
       <Footer />
@@ -21,7 +21,7 @@ export default Layout;
 
 export const NavigationLayout = (props: Props) => {
   return (
-    <div className="fixed inset-0 flex flex-col bg-main-light dark:bg-main-dark  text-black dark:text-primary-white">
+    <div className="fixed inset-0 flex flex-col">
       <Navigation />
       <Container>{props.children}</Container>
     </div>

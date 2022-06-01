@@ -18,25 +18,30 @@ type NextPageWithLayout = NextPage & {
 
 const About: NextPageWithLayout = () => {
   return (
-    <main className="py-20 md:py-2 px-4 md:px-16 lg:px-36">
+    <main className="py-20 xl:py-2 px-4 md:px-16 lg:px-36">
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
       <section
         aria-label="About Hassan Ibrahim | web developer"
-        className=" md:text-lg flex flex-col lg:flex-row lg:gap-20 items-center lg:px-10"
+        className=" flex flex-col xl:flex-row lg:gap-20 items-center lg:px-10 leading-loose"
       >
         <HassanProfile />
         <section>
           <SectionHeader>A bit about me </SectionHeader>
-          <h5 className="my-3 font-bold text-lg">👋 Hey there! </h5>
+          <h5 className="my-3  font-bold text-xl">
+            <span className="wave"> 👋 </span> Hey There!{" "}
+          </h5>
           <div className="tracking-wide">
             <p className="my-5">
-              <span className="text-2xl">M</span>y name is Hassan Ibrahim and
-              welcome to my personal website. I’m a Web Developer from Nigeria
-              and a Computer Science graduate. I’d like to be a Fullstack
-              Developer but i currrently specialize in Frontend Development. I’m
-              a lifetime code hobbyist passionate about learning, leading, and
-              collaborating with other developers to help solve problems with
-              code.
+              <span className="text-2xl">M</span>y name is{" "}
+              <span className="name-color inline-block text-xl font-semibold font-barlow">
+                Hassan Ibrahim A.
+              </span>{" "}
+              and I welcome to my personal website. I’m a Web Developer from
+              Nigeria and a Computer Science graduate. I’d like to be a
+              Fullstack Developer but i currrently specialize in Frontend
+              Development. I’m a lifetime code hobbyist passionate about
+              learning, leading, and collaborating with other developers to help
+              solve problems with code.
             </p>
             <p className="my-3">
               I’m Looking to be part of Engineering teams in Agile and
@@ -55,7 +60,7 @@ const About: NextPageWithLayout = () => {
             on{" "}
             <NextLink href="https://twitter.com/Azanebrahim" passHref>
               <a
-                className="underline"
+                className="underline decoration-wavy name-color font-barlow text-lg"
                 target="_blank"
                 rel="onopener noreferrer"
               >
@@ -68,7 +73,7 @@ const About: NextPageWithLayout = () => {
               passHref
             >
               <a
-                className="underline"
+                className="underline decoration-wavy name-color font-barlow text-lg"
                 target="_blank"
                 rel="onopener noreferrer"
               >
@@ -78,7 +83,7 @@ const About: NextPageWithLayout = () => {
             and{" "}
             <NextLink href="https:/instagram.com/darealazan" passHref>
               <a
-                className="underline"
+                className="underline decoration-wavy name-color font-barlow text-lg"
                 target="_blank"
                 rel="onopener noreferrer"
               >
