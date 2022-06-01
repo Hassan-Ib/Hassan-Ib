@@ -2,6 +2,21 @@ import { motion } from "framer-motion";
 type Props = {};
 
 const IconReact = (props: Props) => {
+  const reactVariants = {
+    hidden: {
+      rotate: 0,
+    },
+    visible: {
+      rotate: 360,
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatDelay: 0.5,
+      },
+    },
+  };
+
   return (
     <div>
       <motion.svg
@@ -14,15 +29,9 @@ const IconReact = (props: Props) => {
           originX: "50%",
           originY: "50%",
         }}
-        animate={{
-          rotate: 360,
-        }}
-        transition={{
-          duration: 2,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatDelay: 0.5,
-        }}
+        variants={reactVariants}
+        initial="hidden"
+        animate="visible"
       >
         <motion.circle cx="32" cy="33" r="6" fill="#ed7899" />
         <motion.path

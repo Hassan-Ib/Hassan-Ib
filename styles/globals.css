@@ -3,8 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  *,
+  button::focus,
+  a::focus {
+    outline-color: #ffc83d;
+    outline-offset: 0.4rem;
+  }
+  body {
+    @apply bg-main-light dark:bg-main-dark text-black dark:text-primary-white;
+  }
+  summary {
+    display: inline-block;
+    cursor: pointer;
+  }
+  a {
+    /* @apply decoration-wavy; */
+  }
+}
+
 .styled-scroll::-webkit-scrollbar {
-  /* width: 2px; */
   @apply bg-transparent w-2 md:w-3;
 }
 
@@ -70,5 +88,8 @@
   }
   .btn {
     @apply border border-black dark:border-main-100 font-medium font-barlow tracking-wider px-6 py-1 rounded-md capitalize hover:bg-main-100/20;
+  }
+  .name-color {
+    @apply text-red-800 dark:text-main-light;
   }
 }

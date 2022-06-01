@@ -1,5 +1,5 @@
 import React from "react";
-import { useDarkModeCtx } from "../context/DarkModeCtx";
+import { useDarkModeCtx } from "../../context/DarkModeCtx";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 export function DarkMode() {

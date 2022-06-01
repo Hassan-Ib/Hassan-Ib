@@ -5,7 +5,7 @@ import { IconReact } from "./Icon";
 const HassanProfile = () => {
   return (
     <div className="relative ">
-      <div className="relative rounded-full w-48 h-48 md:w-60 md:h-60 overflow-hidden">
+      <div className="relative rounded-full w-60 h-60 overflow-hidden">
         <Image
           src={
             "https://avatars.githubusercontent.com/u/53692907?s=400&u=1c19cef9caad448f9565a4b4431ab88e99baaee3&v=4"
@@ -17,7 +17,7 @@ const HassanProfile = () => {
         />
       </div>
 
-      <div className="absolute bottom-0 right-4 md:right-8 md:bottom-2 bg-white w-fit rounded-full">
+      <div className="absolute right-8 bottom-2 bg-white w-fit rounded-full">
         <IconReact />
       </div>
     </div>
