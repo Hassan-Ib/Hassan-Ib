@@ -53,7 +53,7 @@ const Navigation = (props: Props) => {
             />
           )}
         </AnimatePresence>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <button
             aria-label="menu open"
             className=" md:hidden flex items-center font-barlow gap-1 border py-1 px-3 border-black dark:border-white rounded-md"
