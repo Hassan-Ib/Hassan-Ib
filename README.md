@@ -15,11 +15,12 @@
 - 😄 Pronouns: HE/HIM...
 - ⚡ Fun fact: I'm really curious about everything...
 
-## Tools
+<!-- ## Tools -->
 
-![javascript](./public/icons8-javascript.svg)
+<!-- ![javascript](./public/icons8-javascript.svg)
 ![typescript](./public/icons8-typescript.svg)
 ![node js](./public/icons8-nodejs.svg)
 ![react](./public/icons8-react.svg)
 ![redux](./public/icons8-redux.svg)
 ![sass](./public/icons8-sass.svg)
+ -->
