@@ -44,8 +44,11 @@
     @apply bg-main-dark dark:bg-main-light;
   }
   .project-grid {
+    /* @apply mx-auto test-border; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 330px));
+    grid-template-columns: repeat(auto-fill, minmax(min(10rem, 100%), 330px));
+    /* grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); */
+
     gap: 1rem;
     place-content: center;
   }

@@ -19,7 +19,7 @@ type NextPageWithLayout = NextPage & {
 
 const About: NextPageWithLayout = () => {
   return (
-    <main className="py-20 xl:py-2 px-4 md:px-16 lg:px-20">
+    <main className="py-20  xl:py-2 px-4 md:px-16 lg:px-20">
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
       <section
         aria-label="About Hassan Ibrahim | web developer"
@@ -119,7 +119,7 @@ const About: NextPageWithLayout = () => {
         </section>
 
         <SectionHeader>My projects</SectionHeader>
-        <section className="project-grid ">
+        <section className="project-grid">
           {projects.map((el, index) => (
             <Project key={index} src={el.screenshot} {...el}>
               {el.desc}
