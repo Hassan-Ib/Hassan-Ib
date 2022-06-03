@@ -27,7 +27,7 @@ const projects: IProject[] = [
   },
   {
     screenshot: ComfyApp,
-    live_url: new URL("https://silva-search-github-user.netlify.app"),
+    live_url: new URL("https://silva-comfy.netlify.app"),
     name: "comfy-funiture",
     desc: "Ecommerce built with React, data fetching with Graph-ql from",
     repo: "comfy-with-react",
@@ -36,9 +36,9 @@ const projects: IProject[] = [
   },
   {
     screenshot: GithubUser,
-    live_url: new URL("https://silva-comfy.netlify.app"),
+    live_url: new URL("https://silva-search-github-user.netlify.app"),
     name: "github-user-search app",
-    desc: "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+    desc: "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories.",
     repo: "gitbub-user-bornicles",
     repo_url: BaseRepoUrl + "gitbub-user-bornicles",
     toolsTags: ["React", "GitHub API", "Chart.js", "Styled Components"],
