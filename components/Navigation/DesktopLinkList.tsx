@@ -5,16 +5,18 @@ import { ResumeBtn } from "./ResumeBtn";
 
 export function DesktopNavList() {
   return (
-    <ul className="hidden md:flex md:flex-row md:gap-4 items-center ">
-      {navlinks.map((navlink, index) => (
-        <li key={index}>
-          <NavLink href={navlink.href} index={index}>
-            {navlink.text}
-          </NavLink>
-        </li>
-      ))}
+    <div className="hidden md:flex gap-8 mx-4">
+      <ul className="flex flex-row md:gap-4 items-center ">
+        {navlinks.map((navlink, index) => (
+          <li key={index}>
+            <NavLink href={navlink.href} index={index}>
+              {navlink.text}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
       <ResumeBtn />
-    </ul>
+    </div>
   );
 }
 

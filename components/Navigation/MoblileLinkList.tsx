@@ -66,7 +66,7 @@ export function MobileNavList({ closeNav, openNav, isNavOpen }: NavListProps) {
 
   return (
     <motion.div
-      className={`mobile-nav-list-wrapper fixed z-50  w-3/4 sm:w-1/2  left-full h-screen top-0 capitalize tracking-wide flex flex-col justify-center items-center gap-8  bg-main-light backdrop-blur-sm dark:backdrop-blur-lg bg-opacity-80 dark:bg-opacity-70 dark:bg-main-dark transition-transform duration-200 md:hidden border-l border-main-dark dark:border-white`}
+      className={`mobile-nav-list-wrapper fixed z-50  w-3/4 sm:w-1/2  left-full h-screen top-0 capitalize tracking-wide flex flex-col justify-center items-center gap-8  bg-main-light backdrop-blur-sm dark:backdrop-blur-lg bg-opacity-90 dark:bg-opacity-90 dark:bg-main-dark transition-transform duration-200 md:hidden border-l border-main-dark dark:border-white`}
       key="mobile-nav-list-wrapper"
       initial={{
         x: "0",
@@ -87,10 +87,10 @@ export function MobileNavList({ closeNav, openNav, isNavOpen }: NavListProps) {
       <button
         ref={firstFocusableElementRef}
         onClick={closeNav}
-        className="text-3xl absolute right-4 top-0 mt-8 md:hidden"
+        className="text-lg font-barlow flex gap-1 items-center justify-center border border-main-dark dark:border-white rounded-md py-1 px-3 absolute right-4 top-0 mt-8 bg-main-light dark:bg-main-dark md:hidden"
         aria-label="menu close"
       >
-        <MdClose />
+        <span> Close</span> <MdClose className="text-xl mt-1" />
       </button>
       <ul className=" px-6 flex flex-col gap-8">
         {navlinks.map((navlink, index) => (
