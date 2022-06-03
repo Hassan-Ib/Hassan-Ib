@@ -3,7 +3,6 @@ import Image, { ImageProps } from "next/image";
 import NextLink from "next/link";
 import Link from "./Link";
 import type { IProject } from "../utils/projects";
-import { FaFolder } from "react-icons/fa";
 import { FiGithub, FiLink } from "react-icons/fi";
 import { AiOutlineLink } from "react-icons/ai";
 import { BsFolder } from "react-icons/bs";
