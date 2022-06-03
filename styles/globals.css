@@ -22,22 +22,33 @@
   }
 }
 
-.styled-scroll::-webkit-scrollbar {
-  @apply bg-transparent w-2 md:w-3;
-}
-
-.styled-scroll::-webkit-scrollbar-thumb {
-  @apply bg-main-dark dark:bg-main-light;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 300px));
-  gap: 1rem;
-  place-content: center;
-}
-
 @layer utilities {
+  .c-list-style {
+    @apply font-barlow;
+    position: relative;
+  }
+  .c-list-style::before {
+    @apply text-lg;
+    content: "▹";
+    position: absolute;
+    left: -1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 12px;
+  }
+  .styled-scroll::-webkit-scrollbar {
+    @apply bg-transparent w-2 md:w-3;
+  }
+
+  .styled-scroll::-webkit-scrollbar-thumb {
+    @apply bg-main-dark dark:bg-main-light;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 330px));
+    gap: 1rem;
+    place-content: center;
+  }
   .test-border {
     border: 1px solid red;
   }
