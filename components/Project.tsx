@@ -9,7 +9,7 @@ import { BsFolder } from "react-icons/bs";
 import ToolTiped from "./ToolTiped";
 const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
   return (
-    <div className=" shadow-2xl dark:shadow-2xl relative transition-transform md:hover:-translate-y-1 rounded-lg">
+    <div className=" shadow-2xl min-h-[350px] max-w-[320px] mx-auto dark:shadow-2xl relative transition-transform md:hover:-translate-y-1 rounded-lg">
       <div className="absolute w-full h-full -z-10 rounded-lg overflow-clip">
         <Image
           src={src}
