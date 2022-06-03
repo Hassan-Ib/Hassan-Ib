@@ -9,8 +9,7 @@ const Container = ({
 }) => {
   return (
     <section
-      className={`xl:container  styled-scroll m-auto flex-1 overflow-auto bg-inherit`}
-    >
+      className={`container  styled-scroll m-auto flex-1 overflow-auto bg-inherit`}>
       {children}
     </section>
   );

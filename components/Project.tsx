@@ -9,15 +9,18 @@ import { BsFolder } from "react-icons/bs";
 import ToolTiped from "./ToolTiped";
 const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
   return (
-    <div className="shadow-2xl relative rounded transition-transform hover:-translate-y-1 ">
-      <Image
-        src={src}
-        alt={`${name}`}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
-      <div className="flex flex-col py-6 px-4 bg-blue-300/95 relative h-full  dark:bg-opacity-90 dark:bg-[#112240]/95">
+    <div className=" shadow-2xl dark:shadow-2xl relative transition-transform md:hover:-translate-y-1 rounded-lg">
+      <div className="absolute w-full h-full -z-10 rounded-lg overflow-clip">
+        <Image
+          src={src}
+          alt={`${name}`}
+          layout="fill"
+          className=""
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div className="flex flex-col py-6 px-4 rounded-md  bg-blue-300/95 relative h-full  dark:bg-opacity-90 dark:bg-[#112240]/95">
         <div className="flex justify-between items-center pb-8">
           <BsFolder className="text-5xl" />
           <div className="text-xl flex items-center gap-3">
