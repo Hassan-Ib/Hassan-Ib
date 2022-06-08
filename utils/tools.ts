@@ -1,9 +1,9 @@
-import JavaScriptSvg from "../public/icons8-javascript.svg";
-import TypeScriptSvg from "../public/icons8-typescript.svg";
-import ReduxSvg from "../public/icons8-redux.svg";
-import SassSvg from "../public/icons8-sass.svg";
-import ReactSvg from "../public/icons8-react.svg";
-import NodeSvg from "../public/icons8-nodejs.svg";
+import JavaScriptSvg from "../public/tools-logo/icons8-javascript.svg";
+import TypeScriptSvg from "../public/tools-logo/icons8-typescript.svg";
+import ReduxSvg from "../public/tools-logo/icons8-redux.svg";
+import SassSvg from "../public/tools-logo/icons8-sass.svg";
+import ReactSvg from "../public/tools-logo/icons8-react.svg";
+import NodeSvg from "../public/tools-logo/icons8-nodejs.svg";
 
 interface ITool {
   src: string;
