@@ -57,8 +57,8 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
           {children}
         </p>
         <ul className="text-xs pt-8 flex gap-3 opacity-70 flex-wrap font-semibold capitalize">
-          {props?.toolsTags &&
-            props.toolsTags.map((tag, index) => (
+          {props?.topics &&
+            props.topics.map((tag, index) => (
               <li key={index}>
                 <span>{tag} </span>
               </li>
