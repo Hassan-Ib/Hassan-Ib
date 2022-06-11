@@ -1,7 +1,7 @@
 import NetFlixClone from "../public/img/netflix-clone.png";
 import GithubUser from "../public/img/Github-User.png";
 import ComfyApp from "../public/img/Comfy-App.png";
-import Pokedex from "../public/img/pok3d3x.png";
+import Pokedex from "../public/img/Hassan-ib.png";
 import Porfolio from "../public/img/Hassan-ib.png";
 import SpaceTourism from "../public/img/space-tourism.png";
 import SchoolBlog from "../public/img/school-blog.png";
@@ -20,42 +20,42 @@ export type IProject = {
 export type TRepo = {
   name: string;
   repo: string;
-  screenshot: StaticImageData;
+  screenshot: string;
 };
 export const repos: TRepo[] = [
   {
     name: "school blog",
     repo: "school-project",
-    screenshot: SchoolBlog,
+    screenshot: "/img/school-blog.png",
   },
   {
     name: "space tourism",
     repo: "space-tourism",
-    screenshot: SpaceTourism,
+    screenshot: "/img/space-tourism.png",
   },
   {
     name: "pok3d3x",
     repo: "pokedex",
-    screenshot: Pokedex,
+    screenshot: "/img/pokedex.png",
   },
   {
     name: "porfolio",
     repo: "Hassan-Ib",
-    screenshot: Porfolio,
+    screenshot: "/img/Hassan-ib.png",
   },
   {
     repo: "Netflix-Clone",
     name: "netflix-clone",
-    screenshot: NetFlixClone,
+    screenshot: "/img/netflix-clone.png",
   },
   {
     repo: "comfy-with-react",
     name: "comfy-funiture",
-    screenshot: ComfyApp,
+    screenshot: "/img/Comfy-app.png",
   },
   {
     repo: "github-user-bornicles",
     name: "github-user-search app",
-    screenshot: GithubUser,
+    screenshot: "/img/Github-User.png",
   },
 ];
