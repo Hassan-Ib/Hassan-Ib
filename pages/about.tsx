@@ -94,17 +94,13 @@ const About = ({ data }: Props) => {
             </p>
             <p className="">Here are few technologies I have used:</p>
 
-            <ul className="flex px-6 py-3 gap-8">
-              <div>
-                <li className="c-list-style">javaScript</li>
-                <li className="c-list-style">React.js</li>
-                <li className="c-list-style">Node.js</li>
-              </div>
-              <div>
-                <li className="c-list-style">typescript</li>
-                <li className="c-list-style">vue.js</li>
-                {/* <li className="c-list-style"></li> */}
-              </div>
+            <ul className="grid grid-cols-2 px-6 py-3 gap-8">
+              <li className="c-list-style">javaScript</li>
+              <li className="c-list-style">React.js</li>
+              <li className="c-list-style">Node.js</li>
+              <li className="c-list-style">typescript</li>
+              <li className="c-list-style">vue.js</li>
+              {/* <li className="c-list-style"></li> */}
             </ul>
           </div>
         </section>
