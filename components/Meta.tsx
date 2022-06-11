@@ -65,6 +65,20 @@ const Meta = (props: Props) => {
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff"></meta>
       <title> {props.title}</title>
+      <meta
+        name="description"
+        content="Hassan Ibrahim is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences."
+      />
+
+      <meta name="og:github" content="https://github.com/Hassan-Ib" />
+      <meta
+        name="og:title"
+        content="Hassan Ibrahim Ayomide Software engineer | Frontend software developer | hassan-ib | Software Engineer"
+      />
+
+      <meta
+        name="keyword"
+        content="portfolio, javascript, typescript, developer, Hassan Ibrahim, Hassn-ib, hassan-ib"></meta>
       {/* <meta name="viewport" content="inital-scale=1.0, width=devic-width" /> */}
     </Head>
   );

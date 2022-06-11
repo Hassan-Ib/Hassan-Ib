@@ -20,20 +20,24 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
           objectPosition="center"
         />
       </div>
-      <div className="flex flex-col py-6 px-4 rounded-md  bg-blue-300/95 relative h-full  dark:bg-opacity-90 dark:bg-[#112240]/95">
+      <article className="flex flex-col py-6 px-4 rounded-md  bg-blue-300/95 relative h-full  dark:bg-opacity-90 dark:bg-[#112240]/95">
         <div className="flex justify-between items-center pb-8">
           <BsFolder className="text-5xl" />
           <div className="text-xl flex items-center gap-3">
             {props?.repo_url && (
               <ToolTiped tip="repository">
-                <Link href={props.repo_url}>
+                <Link
+                  ariaLabel="my github repository link for this project"
+                  href={props.repo_url}>
                   <FiGithub />
                 </Link>
               </ToolTiped>
             )}
             {props?.live_url && (
               <ToolTiped tip="live site ">
-                <Link href={props.live_url}>
+                <Link
+                  ariaLabel="live site link for this project"
+                  href={props.live_url}>
                   <AiOutlineLink />
                 </Link>
               </ToolTiped>
@@ -57,14 +61,14 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
           {children}
         </p>
         <ul className="text-xs pt-8 flex gap-3 opacity-70 flex-wrap font-semibold capitalize">
-          {props?.toolsTags &&
-            props.toolsTags.map((tag, index) => (
+          {props?.topics &&
+            props.topics.map((tag, index) => (
               <li key={index}>
                 <span>{tag} </span>
               </li>
             ))}
         </ul>
-      </div>
+      </article>
     </div>
   );
 };
