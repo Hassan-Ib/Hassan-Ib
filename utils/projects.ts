@@ -51,7 +51,7 @@ export const repos: TRepo[] = [
   {
     repo: "comfy-with-react",
     name: "comfy-funiture",
-    screenshot: "/img/Comfy-app.png",
+    screenshot: "/img/Comfy-App.png",
   },
   {
     repo: "github-user-bornicles",
