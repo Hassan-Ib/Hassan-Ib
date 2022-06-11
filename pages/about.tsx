@@ -1,6 +1,7 @@
-import type { NextPage } from "next";
+import type { GetStaticProps } from "next";
 import NextLink from "next/link";
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactElement } from "react";
+import { getRepos } from "../Api/repos";
 import {
   Layout,
   Meta,
@@ -10,14 +11,14 @@ import {
   ToolsBadge,
 } from "../components";
 import tools from "../utils/tools";
-import projects from "../utils/projects";
+import { repos as reposInfo, IProject } from "../utils/projects";
 import { SiMinutemailer } from "react-icons/si";
 
-type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
+type Props = {
+  data: string;
 };
-
-const About: NextPageWithLayout = () => {
+const About = ({ data }: Props) => {
+  const repos: IProject[] = JSON.parse(data);
   return (
     <main className="py-20  xl:py-2 px-4 md:px-16 lg:px-20">
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
@@ -109,20 +110,20 @@ const About: NextPageWithLayout = () => {
         </section>
       </section>
 
-      <section aria-label="Hassan Ibrahim projects" className="mt-16">
+      <section aria-label="Hassan Ibrahim projects" className="my-16">
         <section
           aria-label="Hassan Ibrahim development tools || web developer"
-          className="flex justify-center items-center gap-3">
+          className="flex justify-center items-center gap-3 pt-16 my-16">
           {tools.map((el, index) => (
             <ToolsBadge key={index} src={el.src} toolName={el.toolName} />
           ))}
         </section>
 
         <SectionHeader>My projects</SectionHeader>
-        <section className="project-grid">
-          {projects.map((el, index) => (
-            <Project key={index} src={el.screenshot} {...el}>
-              {el.desc}
+        <section className="project-grid mt-10">
+          {repos.map((repo, index) => (
+            <Project key={index} src={repo.screenshot} {...repo}>
+              {repo.description}
             </Project>
           ))}
         </section>
@@ -131,6 +132,41 @@ const About: NextPageWithLayout = () => {
   );
 };
 
-About.getLayout = (page) => <Layout>{page}</Layout>;
+About.getLayout = (page: ReactElement) => <Layout>{page}</Layout>;
 
 export default About;
+
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const reposName = reposInfo.map((el) => el.repo);
+    // console.log("reposName", reposName);
+    const data = await getRepos(reposName);
+
+    if (!data) {
+      throw "Error fetching data";
+    }
+    const filteredData = data.map((repo, index) => {
+      const { data } = repo;
+      return {
+        name: reposInfo[index].name,
+        repo_url: data.html_url,
+        live_url: data.homepage,
+        topics: data.topics,
+        description: data.description,
+        screenshot: reposInfo[index].screenshot,
+      };
+    });
+
+    // console.log("filteredData", filteredData);
+    return {
+      props: {
+        data: JSON.stringify(filteredData),
+      },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      notFound: true,
+    };
+  }
+};

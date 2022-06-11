@@ -1,48 +1,61 @@
 import NetFlixClone from "../public/img/netflix-clone.png";
 import GithubUser from "../public/img/Github-User.png";
 import ComfyApp from "../public/img/Comfy-App.png";
+import Pokedex from "../public/img/Hassan-ib.png";
+import Porfolio from "../public/img/Hassan-ib.png";
+import SpaceTourism from "../public/img/space-tourism.png";
+import SchoolBlog from "../public/img/school-blog.png";
 
 export type IProject = {
   name: string;
-  desc: string;
+  description: string;
   live_url: URL;
   screenshot: StaticImageData;
   repo: string;
   repo_url?: string;
-  toolsTags?: string[];
+  topics?: string[];
   // live_url?: string;
 };
 
-const BaseRepoUrl = "https://github.com/Hassan-Ib/";
-
-const projects: IProject[] = [
+export type TRepo = {
+  name: string;
+  repo: string;
+  screenshot: string;
+};
+export const repos: TRepo[] = [
   {
-    screenshot: NetFlixClone,
-    live_url: new URL("https://netflix-clone-9bf8c.web.app"),
-    name: "netflix-clone",
-    desc: "Netflix clone built with React, Axios and TMDB API",
+    name: "school blog",
+    repo: "school-project",
+    screenshot: "/img/school-blog.png",
+  },
+  {
+    name: "space tourism",
+    repo: "space-tourism",
+    screenshot: "/img/space-tourism.png",
+  },
+  {
+    name: "pok3d3x",
+    repo: "pokedex",
+    screenshot: "/img/pokedex.png",
+  },
+  {
+    name: "porfolio",
+    repo: "Hassan-Ib",
+    screenshot: "/img/Hassan-ib.png",
+  },
+  {
     repo: "Netflix-Clone",
-    repo_url: BaseRepoUrl + "Netflix-Clone",
-    toolsTags: ["React", "Axios", "TMDB API", "react-router-dom"],
+    name: "netflix-clone",
+    screenshot: "/img/netflix-clone.png",
   },
   {
-    screenshot: ComfyApp,
-    live_url: new URL("https://silva-comfy.netlify.app"),
-    name: "comfy-funiture",
-    desc: "Ecommerce built with React, data fetching with Graph-ql from",
     repo: "comfy-with-react",
-    repo_url: BaseRepoUrl + "comfy-with-react",
-    toolsTags: ["React", "GraphQL", "Styled-components", "Contentful"],
+    name: "comfy-funiture",
+    screenshot: "/img/Comfy-App.png",
   },
   {
-    screenshot: GithubUser,
-    live_url: new URL("https://silva-search-github-user.netlify.app"),
+    repo: "github-user-bornicles",
     name: "github-user-search app",
-    desc: "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories.",
-    repo: "gitbub-user-bornicles",
-    repo_url: BaseRepoUrl + "gitbub-user-bornicles",
-    toolsTags: ["React", "GitHub API", "Chart.js", "Styled Components"],
+    screenshot: "/img/Github-User.png",
   },
 ];
-
-export default projects;
