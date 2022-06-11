@@ -31,13 +31,11 @@ const Footer = () => {
             aria-label="social media icons"
             className="  md:fixed bottom-6 left-6 z-20 flex md:flex-col gap-5 max-w-fit mb-4 text-2xl md:dark:text-white md:before-stroke md:after-stroke">
             {socialsInfo.map((social, index) => (
-              <Social
-                key={index}
-                href={social.href}
-                className=""
-                linkTo={social.linkTo}>
-                {social.icon}
-              </Social>
+              <li key={index}>
+                <Social href={social.href} className="" linkTo={social.linkTo}>
+                  {social.icon}
+                </Social>
+              </li>
             ))}
           </ul>
 
