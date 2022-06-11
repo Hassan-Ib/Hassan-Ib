@@ -23,7 +23,7 @@ const Home: NextPageWithLayout = () => {
       <Navigation />
       <Container>
         <main className="h-[700px] md:h-[600px]  py-6 px-4 flex flex-col justify-around md:flex-row md:items-center md:justify-around ">
-          <Meta title="Hassan Ibrahim Ayomide" />
+          <Meta title="Hassan Ibrahim Ayomide | Frontend software developer | Software Engineer" />
           <section className=" flex flex-col self-start md:self-auto items-start">
             <HassanProfile />
             <div className="my-8  md:my-10 font-barlow tracking-widest">

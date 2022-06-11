@@ -38,7 +38,7 @@ const Navigation = (props: Props) => {
     <header className="py-1">
       <nav className="py-4 px-4 flex items-center ">
         <div className="flex-1">
-          <Link href="/">
+          <Link ariaLabel="home logo" href="/">
             <Logo />
           </Link>
         </div>
@@ -57,8 +57,7 @@ const Navigation = (props: Props) => {
           <button
             aria-label="menu open"
             className=" md:hidden flex items-center font-barlow gap-1 border py-1 px-3 border-black dark:border-white rounded-md"
-            onClick={openNav}
-          >
+            onClick={openNav}>
             Menu <BiMenu className=" text-3xl" />
           </button>
 
