@@ -28,81 +28,83 @@ const About = ({ data }: Props) => {
         <HassanProfile />
         <section>
           <SectionHeader>A bit about me </SectionHeader>
-          <h5 className="my-3  font-bold text-xl">
-            <span className="wave"> 👋 </span> Hey There!{" "}
-          </h5>
-          <div className="tracking-wide opacity-90">
-            <p className="my-5">
-              <span className="text-2xl">M</span>y name is{" "}
-              <span className="name-color inline-block text-xl font-semibold font-barlow">
-                Ibrahim.
-              </span>{" "}
-              and I’m a Frontend Web Developer from Nigeria. I love to build
-              things that live on the internet. My main focus is building
-              accessible, ally type of accessbility, web apps and collaborating
-              with other developers to help solve problems.
-            </p>
-            <p className="my-3">
-              I’m Looking to be part of Engineering teams in Agile and
-              Innovative Technology companies,I’m a proactive team player, who
-              likes challenges, achieving goals and learning new things.
-            </p>
+          <section>
+            <h3 className="my-3  font-bold text-xl">
+              <span className="wave"> 👋 </span> Hey There!{" "}
+            </h3>
+            <div className="tracking-wide opacity-90">
+              <p className="my-5">
+                <span className="text-2xl">M</span>y name is{" "}
+                <span className="name-color inline-block text-xl font-semibold font-barlow">
+                  Ibrahim.
+                </span>{" "}
+                and I’m a Frontend Web Developer from Nigeria. I love to build
+                things that live on the internet. My main focus is building
+                accessible, ally type of accessbility, web apps and
+                collaborating with other developers to help solve problems.
+              </p>
+              <p className="my-3">
+                I’m Looking to be part of Engineering teams in Agile and
+                Innovative Technology companies,I’m a proactive team player, who
+                likes challenges, achieving goals and learning new things.
+              </p>
 
-            <p>
-              Have got any exciting opportunities?, You can reach or catch up
-              with me on{" "}
-              <NextLink href="https://twitter.com/Azanebrahim" passHref>
+              <p>
+                Have got any exciting opportunities?, You can reach or catch up
+                with me on{" "}
+                <NextLink href="https://twitter.com/Azanebrahim" passHref>
+                  <a
+                    className="underline decoration-wavy name-color font-barlow text-lg"
+                    target="_blank"
+                    rel="onopener noreferrer">
+                    Twitter
+                  </a>
+                </NextLink>
+                ,{" "}
+                <NextLink
+                  href="https://facebook.com/profile.php?id=100050198353049"
+                  passHref>
+                  <a
+                    className="underline decoration-wavy name-color font-barlow text-lg"
+                    target="_blank"
+                    rel="onopener noreferrer">
+                    Facebook
+                  </a>
+                </NextLink>{" "}
+                and{" "}
+                <NextLink href="https:/instagram.com/darealazan" passHref>
+                  <a
+                    className="underline decoration-wavy name-color font-barlow text-lg"
+                    target="_blank"
+                    rel="onopener noreferrer">
+                    Instagram
+                  </a>
+                </NextLink>
+                . or you can just mail me directly
                 <a
-                  className="underline decoration-wavy name-color font-barlow text-lg"
-                  target="_blank"
-                  rel="onopener noreferrer">
-                  Twitter
+                  href="mailto:azanebrahim@gmail.com"
+                  className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#88380d] text-white flex items-center gap-2 w-fit">
+                  <SiMinutemailer className="text-[#ffdd00] text-2xl" /> send
+                  e-mail
                 </a>
-              </NextLink>
-              ,{" "}
-              <NextLink
-                href="https://facebook.com/profile.php?id=100050198353049"
-                passHref>
-                <a
-                  className="underline decoration-wavy name-color font-barlow text-lg"
-                  target="_blank"
-                  rel="onopener noreferrer">
-                  Facebook
-                </a>
-              </NextLink>{" "}
-              and{" "}
-              <NextLink href="https:/instagram.com/darealazan" passHref>
-                <a
-                  className="underline decoration-wavy name-color font-barlow text-lg"
-                  target="_blank"
-                  rel="onopener noreferrer">
-                  Instagram
-                </a>
-              </NextLink>
-              . or you can just mail me directly
-              <a
-                href="mailto:azanebrahim@gmail.com"
-                className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#88380d] text-white flex items-center gap-2 w-fit">
-                <SiMinutemailer className="text-[#ffdd00] text-2xl" /> send
-                e-mail
-              </a>
-            </p>
-            <p className="py-3">
-              In my free time, I try to keep up with new technologies and work
-              on side projects to better under the technologies that I use.
-              below are the side projects that i’ve built while learning .
-            </p>
-            <p className="">Here are few technologies I have used:</p>
+              </p>
+              <p className="py-3">
+                In my free time, I try to keep up with new technologies and work
+                on side projects to better under the technologies that I use.
+                below are the side projects that i’ve built while learning .
+              </p>
+              <p className="">Here are few technologies I have used:</p>
 
-            <ul className="grid grid-cols-2 px-6 py-3  max-w-xs">
-              <li className="c-list-style">JavaScript</li>
-              <li className="c-list-style">React.js</li>
-              <li className="c-list-style">Node.js</li>
-              <li className="c-list-style">Typescript</li>
-              <li className="c-list-style">vue.js</li>
-              {/* <li className="c-list-style"></li> */}
-            </ul>
-          </div>
+              <ul className="grid grid-cols-2 px-6 py-3  max-w-xs">
+                <li className="c-list-style">JavaScript</li>
+                <li className="c-list-style">React.js</li>
+                <li className="c-list-style">Node.js</li>
+                <li className="c-list-style">Typescript</li>
+                <li className="c-list-style">vue.js</li>
+                {/* <li className="c-list-style"></li> */}
+              </ul>
+            </div>
+          </section>
         </section>
       </section>
 
