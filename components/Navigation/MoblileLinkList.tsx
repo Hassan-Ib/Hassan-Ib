@@ -78,18 +78,15 @@ export function MobileNavList({ closeNav, openNav, isNavOpen }: NavListProps) {
         x: "0%",
       }}
       transition={{
-        duration: 0.1,
-        type: "spring",
-        stiffness: 500,
-        damping: 30,
-      }}
-    >
+        duration: 0.2,
+        // stiffness: 500,
+        // damping: 10,
+      }}>
       <button
         ref={firstFocusableElementRef}
         onClick={closeNav}
         className="text-lg font-barlow flex gap-1 items-center justify-center border border-main-dark dark:border-white rounded-md py-1 px-3 absolute right-4 top-0 mt-8 bg-main-light dark:bg-main-dark md:hidden"
-        aria-label="menu close"
-      >
+        aria-label="menu close">
         <span> Close</span> <MdClose className="text-xl mt-1" />
       </button>
       <ul className=" px-6 flex flex-col gap-8">
