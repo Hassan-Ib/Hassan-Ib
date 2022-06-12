@@ -22,6 +22,7 @@ export default function useDarkMode() {
     setDarkMode(isDarkTheme);
   }, [darkMode]);
 
+  // adding the className to body
   React.useEffect(() => {
     let root = window.document.documentElement;
     darkMode ? root.classList.add("dark") : root.classList.remove("dark");

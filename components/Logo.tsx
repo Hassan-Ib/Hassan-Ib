@@ -11,14 +11,12 @@ const Logo = (props: Props) => {
   const svgVariant = {
     hidden: {
       opacity: 0,
-      rotateZ: 45,
     },
     visible: {
-      opacity: [0.5, 1],
-      rotateZ: 0,
+      opacity: 1,
       transition: {
         when: "beforeChildren",
-        // duration: 1,
+        duration: 0.1,
       },
     },
   };
@@ -31,7 +29,7 @@ const Logo = (props: Props) => {
       pathLength: 1,
       opacity: 1,
       transition: {
-        duration: 2.5,
+        duration: 1.5,
         ease: "anticipate",
       },
     },
@@ -43,7 +41,7 @@ const Logo = (props: Props) => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 1.5,
+        delay: 0.1,
       },
     },
   };
@@ -59,8 +57,7 @@ const Logo = (props: Props) => {
           className="h-10 text-6xl font-black"
           variants={svgVariant}
           initial="hidden"
-          animate="visible"
-        >
+          animate="visible">
           <motion.path
             d="M2 36.4476L65.8179 2.26877L129.636 36.4476V104.552L65.8179 138.731L2 104.552V36.4476Z"
             stroke="#0A192F"
@@ -87,8 +84,7 @@ const Logo = (props: Props) => {
           className="h-10"
           variants={svgVariant}
           initial="hidden"
-          animate="visible"
-        >
+          animate="visible">
           <motion.path
             d="M2 36.4476L65.8179 2.26877L129.636 36.4476V104.552L65.8179 138.731L2 104.552V36.4476Z"
             stroke="#FCFDFF"

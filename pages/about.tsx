@@ -82,7 +82,7 @@ const About = ({ data }: Props) => {
               . or you can just mail me directly
               <a
                 href="mailto:azanebrahim@gmail.com"
-                className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#ff813f] text-white flex items-center gap-2 w-fit">
+                className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#88380d] text-white flex items-center gap-2 w-fit">
                 <SiMinutemailer className="text-[#ffdd00] text-2xl" /> send
                 e-mail
               </a>
@@ -94,11 +94,11 @@ const About = ({ data }: Props) => {
             </p>
             <p className="">Here are few technologies I have used:</p>
 
-            <ul className="grid grid-cols-2 px-6 py-3 gap-8">
-              <li className="c-list-style">javaScript</li>
+            <ul className="grid grid-cols-2 px-6 py-3  max-w-xs">
+              <li className="c-list-style">JavaScript</li>
               <li className="c-list-style">React.js</li>
               <li className="c-list-style">Node.js</li>
-              <li className="c-list-style">typescript</li>
+              <li className="c-list-style">Typescript</li>
               <li className="c-list-style">vue.js</li>
               {/* <li className="c-list-style"></li> */}
             </ul>
