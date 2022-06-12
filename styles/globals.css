@@ -21,7 +21,15 @@
     /* @apply decoration-wavy; */
   }
 }
-
+@layer components {
+  details::marker,
+  details summary::marker {
+    @apply hidden;
+  }
+  summary {
+    list-style: none;
+  }
+}
 @layer utilities {
   .c-list-style {
     @apply font-barlow;
@@ -106,6 +114,6 @@
     @apply border border-black dark:border-main-100 font-medium font-barlow tracking-wider px-6 py-1 rounded-md capitalize hover:bg-main-100/20;
   }
   .name-color {
-    @apply text-red-800 dark:text-main-light;
+    @apply dark:text-main-light;
   }
 }

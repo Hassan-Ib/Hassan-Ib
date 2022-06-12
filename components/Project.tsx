@@ -9,17 +9,19 @@ import { BsFolder } from "react-icons/bs";
 import ToolTiped from "./ToolTiped";
 const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
   return (
-    <div className=" shadow-2xl min-h-[350px] max-w-[320px] mx-auto dark:shadow-2xl relative transition-transform md:hover:-translate-y-1 rounded-lg">
-      <div className="absolute w-full h-full -z-10 rounded-lg overflow-clip">
-        <Image
-          src={src}
-          alt={`${name}`}
-          layout="fill"
-          className=""
-          objectFit="cover"
-          objectPosition="center"
-        />
-      </div>
+    <section className=" shadow-2xl min-h-[350px] max-w-[320px] mx-auto dark:shadow-2xl relative transition-transform md:hover:-translate-y-1 rounded-lg">
+      <section className="absolute w-full h-full -z-10 rounded-lg overflow-clip">
+        <div className="relative w-full h-full">
+          <Image
+            src={src}
+            alt={`${name}`}
+            layout="fill"
+            className=""
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
+      </section>
       <article className="flex flex-col py-6 px-4 rounded-md  bg-blue-300/95 relative h-full  dark:bg-opacity-90 dark:bg-[#112240]/95">
         <div className="flex justify-between items-center pb-8">
           <BsFolder className="text-5xl" />
@@ -44,9 +46,9 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
             )}
           </div>
         </div>
-        <h4 className="capitalize font-barlow font-medium tracking-wider text-sm opacity-70">
+        <p className="capitalize font-barlow font-medium tracking-wider text-sm opacity-70">
           Featured Project
-        </h4>
+        </p>
         <h3>
           <NextLink href={props.live_url} passHref>
             <a
@@ -69,7 +71,7 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
             ))}
         </ul>
       </article>
-    </div>
+    </section>
   );
 };
 
