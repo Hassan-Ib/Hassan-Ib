@@ -15,6 +15,7 @@ const HassanProfile = () => {
           layout="fill"
           // width={60}
           // height={60}
+          priority
         />
       </div>
       <div className="absolute right-8 bottom-2 bg-white w-fit rounded-full">

@@ -78,9 +78,8 @@ export function MobileNavList({ closeNav, openNav, isNavOpen }: NavListProps) {
         x: "0%",
       }}
       transition={{
-        duration: 0.2,
-        // stiffness: 500,
-        // damping: 10,
+        duration: 0.1,
+        type: "tween",
       }}>
       <button
         ref={firstFocusableElementRef}
