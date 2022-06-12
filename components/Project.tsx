@@ -47,7 +47,7 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
         <h4 className="capitalize font-barlow font-medium tracking-wider text-sm opacity-70">
           Featured Project
         </h4>
-        <h1>
+        <h3>
           <NextLink href={props.live_url} passHref>
             <a
               target="_blank"
@@ -56,7 +56,7 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
               {name}
             </a>
           </NextLink>
-        </h1>
+        </h3>
         <p className="opacity-80 text-[0.95rem] leading-relaxed flex-1">
           {children}
         </p>
