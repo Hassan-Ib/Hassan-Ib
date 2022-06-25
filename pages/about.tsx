@@ -38,15 +38,21 @@ const About = ({ data }: Props) => {
                 <span className="name-color inline-block text-xl font-semibold font-barlow">
                   Ibrahim.
                 </span>{" "}
-                and I’m a Frontend Web Developer from Nigeria. I love to build
-                things that live on the internet. My main focus is building
-                accessible, ally type of accessbility, web apps and
-                collaborating with other developers to help solve problems.
+                A Frontend Web Developer from Nigeria. I love to build things
+                that live on the internet. My main focus is to develop
+                performant web applications and collaborate with other
+                developers to solve problems relating to the web and web
+                applications.
               </p>
               <p className="my-3">
-                I’m Looking to be part of Engineering teams in Agile and
-                Innovative Technology companies,I’m a proactive team player, who
-                likes challenges, achieving goals and learning new things.
+                I am very enthusiastic about developing accessible web
+                applications.
+              </p>
+              <p className="my-3">
+                I am looking to be part of Engineering teams in Agile and
+                Innovative companies, accessible web applications, ally type
+                accessibility, I am a proactive team player who likes
+                challenges, achieving goals, and learning.
               </p>
 
               <p>
