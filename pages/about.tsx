@@ -106,7 +106,7 @@ const About = ({ data }: Props) => {
                 <li className="c-list-style">React.js</li>
                 <li className="c-list-style">Node.js</li>
                 <li className="c-list-style">Typescript</li>
-                <li className="c-list-style">vue.js</li>
+                <li className="c-list-style">Vue.js</li>
                 {/* <li className="c-list-style"></li> */}
               </ul>
             </div>
