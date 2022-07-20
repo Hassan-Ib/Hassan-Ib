@@ -9,8 +9,8 @@ export const navlinks = [
     text: "About",
   },
 
-  {
-    href: "/contact",
-    text: "Contact",
-  },
+  // {
+  //   href: "/contact",
+  //   text: "Contact",
+  // },
 ];
