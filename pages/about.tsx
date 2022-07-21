@@ -35,14 +35,18 @@ const About = ({ data }: Props) => {
             <div className="tracking-wide opacity-90">
               <p className="my-5">
                 <span className="text-2xl">M</span>y name is{" "}
-                <span className="name-color inline-block text-xl font-semibold font-barlow">
+                <span className="name-color inline-block text-lg font-semibold font-barlow">
                   Ibrahim.
                 </span>{" "}
-                A Frontend Web Developer from Nigeria. I love to build things
-                that live on the internet. My main focus is to develop
-                performant web applications and collaborate with other
-                developers to solve problems relating to the web and web
-                applications.
+                A{" "}
+                <span className="name-color inline-block text-xl font-semibold font-barlow">
+                  {" "}
+                  Frontend Web Developer{" "}
+                </span>{" "}
+                from Nigeria. I love to build things that live on the internet.
+                My main focus is to develop performant web applications and
+                solving problems relating to the web by collaborating with other
+                developers.
               </p>
               <p className="my-3">
                 I am very enthusiastic about developing accessible web
