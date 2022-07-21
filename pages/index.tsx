@@ -42,7 +42,7 @@ const Home: NextPageWithLayout = () => {
               <Link href="/about">Web developer </Link>
             </span>
             <span className="underline decoration-wavy">
-              <Link href="/dowload-cv"> Download CV </Link>
+              <Link href="/dowload-cv"> Download Resume </Link>
             </span>
             {/* <span className="underline">Blogger</span> */}
 
