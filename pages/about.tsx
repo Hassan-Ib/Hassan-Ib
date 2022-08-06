@@ -128,7 +128,7 @@ const About = ({ data }: Props) => {
         </section>
 
         <SectionHeader>My projects</SectionHeader>
-        <section className="project-grid mt-10">
+        <section className="project-grid mt-10 ">
           {repos.map((repo, index) => (
             <Project key={index} src={repo.screenshot} {...repo}>
               {repo.description}

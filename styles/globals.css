@@ -11,7 +11,7 @@
     outline-offset: 0.4rem;
   }
   body {
-    @apply bg-main-light dark:bg-main-dark text-black dark:text-primary-white;
+    @apply bg-white dark:bg-main-dark text-black dark:text-primary-white;
   }
   summary {
     display: inline-block;
@@ -57,6 +57,7 @@
     grid-template-columns: repeat(auto-fit, minmax(min(271px, 100%), 1fr));
     gap: 1rem;
     place-content: center;
+    row-gap: 2rem;
     /* justify-content: center; */
   }
   .project-grid-md {
