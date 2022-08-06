@@ -23,13 +23,13 @@ async function getResume(request: NextApiRequest, response: NextApiResponse) {
     );
     console.log(path);
     const resumeFileStream = fs.createReadStream(resumePath);
-    resumeFileStream.on("open", () => {
-      resumeFileStream.pipe(response);
-    });
-    resumeFileStream.on("error", (error) => {
-      return response.end(error.message);
-    });
-    // return resumeFileStream.pipe(response);
+    // resumeFileStream.on("open", () => {
+    //   resumeFileStream.pipe(response);
+    // });
+    // resumeFileStream.on("error", (error) => {
+    //   return response.end(error.message);
+    // });
+    return resumeFileStream.pipe(response);
   } catch (error) {
     console.log(error);
     return response.status(400).json({ error: error });
