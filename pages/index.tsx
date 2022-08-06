@@ -41,14 +41,12 @@ const Home: NextPageWithLayout = () => {
             <span className="underline decoration-wavy ">
               <Link href="/about">Web developer </Link>
             </span>
-            <span className="underline decoration-wavy border-b border-black dark:boder-b-white">
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  downloadCv();
-                }}>
+            <span className="underline decoration-wavy ">
+              <a
+                href="/api/download_resume"
+                download={"HassanIbrahimResume.pdf"}>
                 Résumé
-              </button>
+              </a>
             </span>
             {/* <span className="underline">Blogger</span> */}
             <span className=""> Book Worm</span>
