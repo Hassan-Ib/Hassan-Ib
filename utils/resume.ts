@@ -1,7 +1,14 @@
 import { saveAs } from "file-saver";
 export const downloadCv = async (url: string = "/api/download-cv") => {
-  const response = await fetch(url);
-  const blob = await response.blob();
-
-  saveAs(blob, "HassanIbrahimResume.pdf");
+  //   const url = "/api/download-cv";
+  try {
+    const response = await fetch(url);
+    console.log(response.status);
+    console.log(response.body);
+    const blob = await response.blob();
+    console.log(blob);
+    saveAs(blob, "HassanIbrahimResume.pdf");
+  } catch (error) {
+    console.log(error);
+  }
 };

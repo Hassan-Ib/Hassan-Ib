@@ -1,20 +1,10 @@
 import React, { EventHandler, MouseEvent, KeyboardEvent } from "react";
 import { saveAs } from "file-saver";
+import { downloadCv } from "../../utils/resume";
 
 export function ResumeBtn({}) {
-  const save = async (
-    e: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>
-  ) => {
-    const url = "/api/download-cv";
-    try {
-      const response = await fetch(url);
-      console.log(response.status);
-      console.log(response.body);
-      const blob = await response.blob();
-      saveAs(blob, "HassanIbrahimResume.pdf");
-    } catch (error) {
-      console.log(error);
-    }
+  const save = async () => {
+    downloadCv();
   };
 
   return (
