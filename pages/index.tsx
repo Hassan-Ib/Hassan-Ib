@@ -38,17 +38,17 @@ const Home: NextPageWithLayout = () => {
             {/* <button className="btn px-2 py-4 text-xl">Resume</button> */}
           </section>
           <section className="text-3xl font-normal md:font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
-            <span className="underline decoration-wavy">
+            <span className="underline decoration-wavy ">
               <Link href="/about">Web developer </Link>
             </span>
-            <span className="underline decoration-wavy">
-              <a
+            <span className="underline decoration-wavy border-b border-black dark:boder-b-white">
+              <button
                 onClick={(e) => {
                   e.preventDefault();
                   downloadCv();
                 }}>
                 Résumé
-              </a>
+              </button>
             </span>
             {/* <span className="underline">Blogger</span> */}
             <span className=""> Book Worm</span>

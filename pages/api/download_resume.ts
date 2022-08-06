@@ -11,7 +11,7 @@ async function getResume(request: NextApiRequest, response: NextApiResponse) {
   response.setHeader("Content-Type", "application/pdf");
   response.setHeader(
     "Content-Disposition",
-    "attachment; filename=Ibrahim Hassan Resume d.pdf"
+    "attachment; filename=Ibrahim Hassan Resumed.pdf"
   );
   try {
     const resumePath = "files/Ibrahim Hassan Resume.pdf";
