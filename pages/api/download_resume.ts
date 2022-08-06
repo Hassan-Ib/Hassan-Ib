@@ -3,22 +3,28 @@ import { pipeline, finished } from "stream";
 import { promisify } from "util";
 import fs from "fs";
 import next from "next";
-
+import path from "path";
 const pipelineAsync = promisify(pipeline);
 
 async function getResume(request: NextApiRequest, response: NextApiResponse) {
   // response.download("filePath", "fileName");
-  response.setHeader("Content-Type", "application/pdf");
-  response.setHeader(
-    "Content-Disposition",
-    "attachment; filename=Ibrahim Hassan Resumed.pdf"
-  );
+
+  if (request.method !== "GET") throw new Error("Method not allowed");
   try {
-    const resumePath = "files/Ibrahim Hassan Resume.pdf";
-    const resumeStream = fs.createReadStream(resumePath);
-    await pipelineAsync(resumeStream, response);
+    response.setHeader("Content-Type", "application/pdf");
+    response.setHeader(
+      "Content-Disposition",
+      "attachment; filename=HassanIbrahimResume.pdf"
+    );
+    const resumePath = path.join(
+      process.cwd(),
+      "public/files/Ibrahim Hassan Resume.pdf"
+    );
+    const resumeFileStream = fs.createReadStream(resumePath);
+    return resumeFileStream.pipe(response);
   } catch (error) {
     console.log(error);
+    response.status(400).json({ error: error });
   }
 }
 
