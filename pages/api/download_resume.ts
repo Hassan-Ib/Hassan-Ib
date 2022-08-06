@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { pipeline, finished } from "stream";
-import { promisify } from "util";
 import fs from "fs";
-import next from "next";
 import path from "path";
-const pipelineAsync = promisify(pipeline);
+// import { pipeline, finished } from "stream";
+// import { promisify } from "util";
+// import next from "next";
+// const pipelineAsync = promisify(pipeline);
 
 async function getResume(request: NextApiRequest, response: NextApiResponse) {
   // response.download("filePath", "fileName");
@@ -18,13 +18,21 @@ async function getResume(request: NextApiRequest, response: NextApiResponse) {
     );
     const resumePath = path.join(
       process.cwd(),
-      "public/files/Ibrahim Hassan Resume.pdf"
+      "files",
+      "Ibrahim Hassan Resume.pdf"
     );
+    console.log(path);
     const resumeFileStream = fs.createReadStream(resumePath);
-    return resumeFileStream.pipe(response);
+    resumeFileStream.on("open", () => {
+      resumeFileStream.pipe(response);
+    });
+    resumeFileStream.on("error", (error) => {
+      return response.end(error.message);
+    });
+    // return resumeFileStream.pipe(response);
   } catch (error) {
     console.log(error);
-    response.status(400).json({ error: error });
+    return response.status(400).json({ error: error });
   }
 }
 

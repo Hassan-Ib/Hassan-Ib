@@ -5,7 +5,12 @@ export const downloadCv = async () => {
 
   try {
     const response = await fetch(url);
-    if (!response.ok) throw response;
+    if (response.status === 400) {
+      throw await response.json();
+    }
+    if (!response.ok) {
+      throw response;
+    }
     const blob = await response.blob();
     console.log(blob);
     saveAs(blob, "HassanIbrahimResume.pdf");
