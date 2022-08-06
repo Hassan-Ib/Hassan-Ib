@@ -9,6 +9,7 @@ import {
   Container,
 } from "../components";
 import Link from "next/link";
+import { downloadCv } from "../utils/resume";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -42,7 +43,9 @@ const Home: NextPageWithLayout = () => {
               <Link href="/about">Web developer </Link>
             </span>
             <span className="underline decoration-wavy">
-              <a href="/api/download-cv"> Résumé </a>
+              <Link href="/api/download-cv" passHref>
+                <a>Résumé</a>
+              </Link>
             </span>
             {/* <span className="underline">Blogger</span> */}
 
