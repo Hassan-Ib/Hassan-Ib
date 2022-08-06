@@ -9,6 +9,7 @@ import {
   Container,
 } from "../components";
 import Link from "next/link";
+import { downloadCv } from "../utils/resume";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -36,22 +37,21 @@ const Home: NextPageWithLayout = () => {
             </div>
             {/* <button className="btn px-2 py-4 text-xl">Resume</button> */}
           </section>
-
           <section className="text-3xl font-normal md:font-medium text-right md:text-4xl flex flex-col self-end md:self-auto gap-4 lg:text-5xl md:gap-8 ">
-            <span className="underline decoration-wavy">
+            <span className="underline decoration-wavy ">
               <Link href="/about">Web developer </Link>
             </span>
             <span className="underline decoration-wavy">
-              <Link href="/dowload-cv"> Résumé </Link>
+              <Link href="/api/download_resume" passHref>
+                <a download>Résumé</a>
+              </Link>
             </span>
             {/* <span className="underline">Blogger</span> */}
-
             <span className=""> Book Worm</span>
             <span className=""> Chess enthusiast</span>
           </section>
         </main>
       </Container>
-
       <Footer />
     </div>
   );
