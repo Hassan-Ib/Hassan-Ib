@@ -9,7 +9,12 @@ const HassanProfile = () => {
   return (
     <div className="relative ">
       <div className="block relative rounded-full w-60 h-60 overflow-hidden">
-        <Image src={hassanIb} alt="Hassan Ibrahim" layout="fill" />
+        <Image
+          src={"/img/hassan-ib.webp"}
+          priority
+          alt="Hassan Ibrahim"
+          layout="fill"
+        />
       </div>
       <div className="absolute right-8 bottom-2 bg-white w-fit rounded-full">
         <IconReact />
