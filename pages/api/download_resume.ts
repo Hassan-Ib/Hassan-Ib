@@ -21,7 +21,7 @@ async function getResume(request: NextApiRequest, response: NextApiResponse) {
       "files",
       "Ibrahim Hassan Resume.pdf"
     );
-    console.log(path);
+    console.log("resume path", resumePath);
     const resumeFileStream = fs.createReadStream(resumePath);
     // resumeFileStream.on("open", () => {
     //   resumeFileStream.pipe(response);
@@ -29,6 +29,7 @@ async function getResume(request: NextApiRequest, response: NextApiResponse) {
     // resumeFileStream.on("error", (error) => {
     //   return response.end(error.message);
     // });
+    console.log("resume file stream ", resumeFileStream);
     return resumeFileStream.pipe(response);
   } catch (error) {
     console.log(error);
