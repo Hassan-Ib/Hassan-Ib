@@ -1,25 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { pipeline, finished } from "stream";
-import { promisify } from "util";
 import fs from "fs";
-import next from "next";
 import path from "path";
-const pipelineAsync = promisify(pipeline);
 
 async function getResume(request: NextApiRequest, response: NextApiResponse) {
   // response.download("filePath", "fileName");
 
   if (request.method !== "GET") throw new Error("Method not allowed");
   try {
-    response.setHeader("Content-Type", "application/pdf");
-    response.setHeader(
-      "Content-Disposition",
-      "attachment; filename=HassanIbrahimResume.pdf"
-    );
+    const filePath = path.join(process.cwd(), "public");
     const resumePath = path.join(
-      process.cwd(),
-      "public/files/Ibrahim Hassan Resume.pdf"
+      filePath,
+      "files",
+      "Ibrahim Hassan Resume.pdf"
     );
+
+    response.writeHead(200, {
+      "Content-Length": fs.statSync(resumePath).size,
+      "Content-Type": "application/pdf",
+      "Content-Disposition": "attachment; filename=Ibrahim Hassan Resume.pdf",
+    });
     const resumeFileStream = fs.createReadStream(resumePath);
     return resumeFileStream.pipe(response);
   } catch (error) {

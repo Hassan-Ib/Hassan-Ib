@@ -10,7 +10,7 @@ export type IProject = {
   name: string;
   description: string;
   live_url: URL;
-  screenshot: StaticImageData;
+  screenshot: string;
   repo: string;
   repo_url?: string;
   topics?: string[];
