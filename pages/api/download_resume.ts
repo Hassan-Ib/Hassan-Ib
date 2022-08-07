@@ -6,35 +6,32 @@ import path from "path";
 // import next from "next";
 // const pipelineAsync = promisify(pipeline);
 
-async function getResume(request: NextApiRequest, response: NextApiResponse) {
+async function handler(request: NextApiRequest, response: NextApiResponse) {
   // response.download("filePath", "fileName");
 
   if (request.method !== "GET") throw new Error("Method not allowed");
   try {
-    response.setHeader("Content-Type", "application/pdf");
-    response.setHeader(
-      "Content-Disposition",
-      "attachment; filename=HassanIbrahimResume.pdf"
-    );
-    const resumePath = path.join(
-      process.cwd(),
-      "files",
-      "Ibrahim Hassan Resume.pdf"
-    );
-    console.log("resume path", resumePath);
+    const fileDirectory = path.join(process.cwd(), "files");
+    const resumePath = path.join(fileDirectory, "Ibrahim Hassan Resume.pdf");
+
+    console.log("resume path", resumePath, __dirname, __filename);
+
     const resumeFileStream = fs.createReadStream(resumePath);
-    // resumeFileStream.on("open", () => {
-    //   resumeFileStream.pipe(response);
-    // });
-    // resumeFileStream.on("error", (error) => {
-    //   return response.end(error.message);
-    // });
-    console.log("resume file stream ", resumeFileStream);
-    return resumeFileStream.pipe(response);
+    const fileSize = fs.statSync(resumePath).size;
+
+    console.log("file size ", fileSize);
+
+    response.writeHead(200, {
+      "Content-Type": "application/pdf",
+      "content-Length": fileSize,
+      "Content-Disposition": "attachment; filename=HassanIbrahimResume.pdf",
+    });
+
+    resumeFileStream.pipe(response);
   } catch (error) {
     console.log(error);
     return response.status(400).json({ error: error });
   }
 }
 
-export default getResume;
+export default handler;
