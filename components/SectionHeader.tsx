@@ -3,16 +3,19 @@ import React from "react";
 type Props = {
   children: React.ReactNode;
   className?: string;
+  index?: number;
 };
 
 const SectionHeader = (props: Props) => {
   return (
-    <h2
-      className={`${props.className} font-barlow py-12 md:py-6 text-2xl font-medium lg:text-3xl text-center flex items-center justify-center`}
-    >
-      <span className="inline-block w-6 border border-main-dark dark:border-white mx-6"></span>
-      {props.children}
-      <span className="inline-block w-6 border border-main-dark dark:border-white mx-6"></span>
+    <h2 className=" py-12 ">
+      <span className="self-end mr-2  my-0 py-0">
+        {props?.index ? "0" + props.index + "." : ""}
+      </span>
+      <span className={`font-barlow text-2xl font-medium lg:text-4xl`}>
+        {props.children}
+      </span>
+      <span className="inline-block w-9/12  bg-main-dark dark:bg-white/80 h-[.05rem] ml-10 self-end"></span>
     </h2>
   );
 };

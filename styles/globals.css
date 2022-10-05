@@ -10,15 +10,15 @@
     outline-color: #ffc83d;
     outline-offset: 0.4rem;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-main-light dark:bg-main-dark text-black dark:text-primary-white;
+    @apply bg-purple-100 dark:bg-main-dark text-black dark:text-primary-white;
   }
   summary {
     display: inline-block;
     cursor: pointer;
-  }
-  a {
-    /* @apply decoration-wavy; */
   }
 }
 @layer components {

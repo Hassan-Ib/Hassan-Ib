@@ -5,12 +5,11 @@ export const navlinks = [
     text: "Home",
   },
   {
-    href: "/about",
+    href: "#about",
     text: "About",
   },
-
-  // {
-  //   href: "/contact",
-  //   text: "Contact",
-  // },
+  {
+    href: "#experience",
+    text: "Experience",
+  },
 ];
