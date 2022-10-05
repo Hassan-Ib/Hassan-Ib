@@ -5,7 +5,7 @@ export const navlinks = [
     text: "Home",
   },
   {
-    href: "/about",
+    href: "#about",
     text: "About",
   },
   {
@@ -16,5 +16,9 @@ export const navlinks = [
   // {
   //   href: "/contact",
   //   text: "Contact",
+  // },
+  // {
+  //   href: "#experience",
+  //   text: "Experience",
   // },
 ];
