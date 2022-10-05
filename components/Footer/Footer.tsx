@@ -29,7 +29,7 @@ const Footer = () => {
         <div className=" text-main-dark absolute bottom-full left-[80%] border-[1px]  shadow-md border-black bg-white p-6  rounded-lg md:bg-none  md:relative md:left-0 md:right-0 md:p-0 md:border-none">
           <ul
             aria-label="social media icons"
-            className="  md:fixed bottom-6 left-6 z-20 flex md:flex-col gap-5 max-w-fit mb-4 text-2xl md:dark:text-white md:before-stroke md:after-stroke">
+            className="  md:fixed bottom-6 left-6 z-20 flex md:flex-col gap-5 max-w-fit mb-4 text-2xl md:dark:text-white  md:after-stroke">
             {socialsInfo.map((social, index) => (
               <li key={index}>
                 <Social href={social.href} className="" linkTo={social.linkTo}>

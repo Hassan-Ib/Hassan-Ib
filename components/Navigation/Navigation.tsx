@@ -35,7 +35,7 @@ const Navigation = (props: Props) => {
     closeNav();
   }, [pathname]);
   return (
-    <header className="py-1">
+    <div className="py-1">
       <nav className="py-4 px-4 flex items-center ">
         <div className="flex-1">
           <Link ariaLabel="home logo" href="/">
@@ -63,7 +63,7 @@ const Navigation = (props: Props) => {
           <DarkMode />
         </div>
       </nav>
-    </header>
+    </div>
   );
 };
 
