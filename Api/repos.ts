@@ -4,6 +4,10 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
+const [token, owner] = [process.env.GITHUB_TOKEN, process.env.GITHUB_OWNER];
+console.log("TOKEN", token);
+console.log("OWNER", owner);
+
 export const getRepos = (repoList: string[]) => {
   return Promise.all(
     repoList.map((repo) =>

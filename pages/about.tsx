@@ -24,7 +24,8 @@ const About = ({ data }: Props) => {
       <Meta title="About Hassan Ibrahim Ayomide | Developer | Bookworm | chess enthusiast" />
       <section
         aria-label="About Hassan Ibrahim | web developer"
-        className=" flex flex-col xl:flex-row lg:gap-20 items-center lg:px-10 leading-loose">
+        className=" flex flex-col xl:flex-row lg:gap-20 items-center lg:px-10 leading-loose"
+      >
         <HassanProfile />
         <section>
           <SectionHeader>A bit about me </SectionHeader>
@@ -66,18 +67,21 @@ const About = ({ data }: Props) => {
                   <a
                     className="underline decoration-wavy name-color font-barlow text-lg"
                     target="_blank"
-                    rel="onopener noreferrer">
+                    rel="onopener noreferrer"
+                  >
                     Twitter
                   </a>
                 </NextLink>
                 ,{" "}
                 <NextLink
                   href="https://facebook.com/profile.php?id=100050198353049"
-                  passHref>
+                  passHref
+                >
                   <a
                     className="underline decoration-wavy name-color font-barlow text-lg"
                     target="_blank"
-                    rel="onopener noreferrer">
+                    rel="onopener noreferrer"
+                  >
                     Facebook
                   </a>
                 </NextLink>{" "}
@@ -86,14 +90,16 @@ const About = ({ data }: Props) => {
                   <a
                     className="underline decoration-wavy name-color font-barlow text-lg"
                     target="_blank"
-                    rel="onopener noreferrer">
+                    rel="onopener noreferrer"
+                  >
                     Instagram
                   </a>
                 </NextLink>
                 . or you can just mail me directly
                 <a
                   href="mailto:azanebrahim@gmail.com"
-                  className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#88380d] text-white flex items-center gap-2 w-fit">
+                  className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#88380d] text-white flex items-center gap-2 w-fit"
+                >
                   <SiMinutemailer className="text-[#ffdd00] text-2xl" /> send
                   e-mail
                 </a>
@@ -121,7 +127,8 @@ const About = ({ data }: Props) => {
       <section aria-label="Hassan Ibrahim projects" className="my-16">
         <section
           aria-label="Hassan Ibrahim development tools || web developer"
-          className="flex justify-center items-center gap-3 pt-16 my-16">
+          className="flex justify-center items-center gap-3 pt-16 my-16"
+        >
           {tools.map((el, index) => (
             <ToolsBadge key={index} src={el.src} toolName={el.toolName} />
           ))}
@@ -148,6 +155,10 @@ export const getStaticProps: GetStaticProps = async () => {
   try {
     const reposName = reposInfo.map((el) => el.repo);
     // console.log("reposName", reposName);
+    const [token, owner] = [process.env.GITHUB_TOKEN, process.env.GITHUB_OWNER];
+    console.log("TOKEN", token);
+    console.log("OWNER", owner);
+
     const data = await getRepos(reposName);
 
     if (!data) {
