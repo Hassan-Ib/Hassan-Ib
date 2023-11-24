@@ -16,6 +16,9 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   try {
+    const [token, owner] = [process.env.GITHUB_TOKEN, process.env.GITHUB_OWNER];
+    console.log("TOKEN", token);
+    console.log("OWNER", owner);
     const fetchRepos = () =>
       Promise.all(
         repos.map(({ repo }) =>
@@ -26,6 +29,7 @@ export default async function handler(
         )
       );
     let reposData = await fetchRepos();
+
     const data = reposData.map((repo) => {
       const { data } = repo;
 
@@ -41,7 +45,11 @@ export default async function handler(
 
     res.status(200).json({ data: data });
   } catch (error) {
-    console.log("error", error);
+    const [token, owner] = [process.env.GITHUB_TOKEN, process.env.GITHUB_OWNER];
+    console.log("TOKEN", token);
+    console.log("OWNER", owner);
+    // const err = error as Error;
+    // console.log("repo fetch error", err.message);
     // return { notFound: true };
     res.status(404).json({});
   }

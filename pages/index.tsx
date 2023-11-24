@@ -95,7 +95,6 @@ export default Home;
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const reposName = reposInfo.map((el) => el.repo);
-    // console.log("reposName", reposName);
     const data = await getRepos(reposName);
 
     if (!data) {
@@ -113,14 +112,14 @@ export const getStaticProps: GetStaticProps = async () => {
       };
     });
 
-    // console.log("filteredData", filteredData);
     return {
       props: {
         data: JSON.stringify(filteredData),
       },
     };
   } catch (error) {
-    console.log(error);
+    const err = error as Error;
+    console.log(err.message);
     return {
       notFound: true,
     };
