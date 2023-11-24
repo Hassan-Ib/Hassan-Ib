@@ -7,7 +7,8 @@ const About = () => {
   return (
     <section
       aria-label="About Hassan Ibrahim | web developer"
-      className=" flex flex-col xl:flex-row lg:gap-20 items-center lg:px-10 leading-loose">
+      className=" flex flex-col xl:flex-row lg:gap-20 items-center lg:px-10 leading-loose"
+    >
       {/* <HassanProfile /> */}
       <section className="max-w-3xl mx-auto" id="about">
         <SectionHeader index={1}>About me </SectionHeader>
@@ -24,7 +25,7 @@ const About = () => {
               A{" "}
               <span className="name-color inline-block text-xl font-semibold font-barlow">
                 {" "}
-                Frontend Web Developer{" "}
+                Frontend Engineer{" "}
               </span>{" "}
               from Nigeria. I love to build things that live on the internet. My
               main focus is to develop performant web applications and solving
@@ -49,18 +50,21 @@ const About = () => {
                 <a
                   className="underline decoration-wavy name-color font-barlow text-lg"
                   target="_blank"
-                  rel="onopener noreferrer">
+                  rel="onopener noreferrer"
+                >
                   Twitter
                 </a>
               </NextLink>
               ,{" "}
               <NextLink
                 href="https://facebook.com/profile.php?id=100050198353049"
-                passHref>
+                passHref
+              >
                 <a
                   className="underline decoration-wavy name-color font-barlow text-lg"
                   target="_blank"
-                  rel="onopener noreferrer">
+                  rel="onopener noreferrer"
+                >
                   Facebook
                 </a>
               </NextLink>{" "}
@@ -69,14 +73,16 @@ const About = () => {
                 <a
                   className="underline decoration-wavy name-color font-barlow text-lg"
                   target="_blank"
-                  rel="onopener noreferrer">
+                  rel="onopener noreferrer"
+                >
                   Instagram
                 </a>
               </NextLink>
               . or you can just mail me directly
               <a
                 href="mailto:azanebrahim@gmail.com"
-                className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#88380d] text-white flex items-center gap-2 w-fit">
+                className="font-barlow my-4 px-4 py-1 rounded-lg bg-[#88380d] text-white flex items-center gap-2 w-fit"
+              >
                 <SiMinutemailer className="text-[#ffdd00] text-2xl" /> send
                 e-mail
               </a>

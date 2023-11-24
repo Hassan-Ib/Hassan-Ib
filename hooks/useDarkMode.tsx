@@ -3,7 +3,7 @@ import React from "react";
 const IS_DARK_MODE = "dark";
 
 export default function useDarkMode() {
-  const [darkMode, setDarkMode] = React.useState<boolean>(false);
+  const [darkMode, setDarkMode] = React.useState<boolean>(true);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
