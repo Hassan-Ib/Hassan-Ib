@@ -22,7 +22,7 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
           />
         </div>
       </section>
-      <article className="flex flex-col py-6 px-4 rounded-md  bg-blue-300/95 relative h-full  dark:bg-opacity-90 dark:bg-[#112240]/95">
+      <article className="flex flex-col py-6 px-4 rounded-md  bg-blue-100/90 relative h-full  dark:bg-opacity-90 dark:bg-[#112240]/95">
         <div className="flex justify-between items-center pb-8">
           <BsFolder className="text-5xl" />
           <div className="text-xl flex items-center gap-3">
@@ -30,7 +30,8 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
               <ToolTiped tip="repository">
                 <Link
                   ariaLabel="my github repository link for this project"
-                  href={props.repo_url}>
+                  href={props.repo_url}
+                >
                   <FiGithub />
                 </Link>
               </ToolTiped>
@@ -39,7 +40,8 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
               <ToolTiped tip="live site ">
                 <Link
                   ariaLabel="live site link for this project"
-                  href={props.live_url}>
+                  href={props.live_url}
+                >
                   <AiOutlineLink />
                 </Link>
               </ToolTiped>
@@ -54,12 +56,13 @@ const Project = ({ src, name, children, ...props }: ImageProps & IProject) => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              className="underline capitalize block text-2xl tracking-wide font-semibold my-4">
+              className="underline capitalize block text-2xl tracking-wide font-semibold my-4"
+            >
               {name}
             </a>
           </NextLink>
         </h3>
-        <p className="opacity-80 text-[0.95rem] leading-relaxed flex-1">
+        <p className="opacity-80 text-[0.85rem] leading-relaxed flex-1">
           {children}
         </p>
         <ul className="text-xs pt-8 flex gap-3 opacity-70 flex-wrap font-semibold capitalize">

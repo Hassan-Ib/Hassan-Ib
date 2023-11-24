@@ -10,7 +10,8 @@ import {
 import Link from "next/link";
 import type { GetStaticProps } from "next";
 import { getRepos } from "../Api/repos";
-import { SectionHeader, Project, ToolsBadge, AboutMe } from "../components";
+import { SectionHeader, Project, ToolsBadge } from "../components";
+import AboutMe from "../components/About";
 import tools from "../utils/tools";
 import { repos as reposInfo, IProject } from "../utils/projects";
 
@@ -30,7 +31,7 @@ const Home = ({ data }: Props) => {
       <Navigation />
       <Container>
         <header className="h-[700px] md:h-[600px]  py-6 px-4 flex flex-col justify-around md:flex-row md:items-center md:justify-around ">
-          <Meta title="Hassan Ibrahim Ayomide | Frontend software developer | Software Engineer" />
+          <Meta title="Hassan Ibrahim Ayomide | Frontend software developer | Software Engineer | Frontend Engineer" />
           <section className=" flex flex-col self-start md:self-auto items-start">
             <HassanProfile />
             <div className="my-8  md:my-10 font-barlow tracking-widest">
@@ -64,7 +65,8 @@ const Home = ({ data }: Props) => {
           <section aria-label="Hassan Ibrahim projects" className="my-16">
             <section
               aria-label="Hassan Ibrahim development tools || web developer"
-              className="flex justify-center items-center gap-3 pt-16 my-16">
+              className="flex justify-center items-center gap-3 pt-16 my-16"
+            >
               {tools.map((el, index) => (
                 <ToolsBadge key={index} src={el.src} toolName={el.toolName} />
               ))}
