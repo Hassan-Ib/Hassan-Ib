@@ -11,7 +11,7 @@
     outline-offset: 0.4rem;
   }
   body {
-    @apply bg-main-light dark:bg-main-dark text-black dark:text-primary-white;
+      @apply bg-white dark:bg-main-dark text-black dark:text-primary-white;
   }
   summary {
     display: inline-block;
