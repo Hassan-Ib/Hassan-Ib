@@ -4,6 +4,7 @@ import ReduxSvg from "../public/tools-logo/icons8-redux.svg";
 import SassSvg from "../public/tools-logo/icons8-sass.svg";
 import ReactSvg from "../public/tools-logo/icons8-react.svg";
 import NodeSvg from "../public/tools-logo/icons8-nodejs.svg";
+import AngularSvg from "../public/tools-logo/icons8-angularjs.svg";
 
 interface ITool {
   src: string;
@@ -22,6 +23,10 @@ const tools: ITool[] = [
   {
     src: ReactSvg,
     toolName: "react js",
+  },
+  {
+    src: AngularSvg,
+    toolName: "Angular js",
   },
   {
     src: NodeSvg,

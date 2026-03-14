@@ -10,7 +10,13 @@ import {
 import Link from "next/link";
 import type { GetStaticProps } from "next";
 import { getRepos } from "../Api/repos";
-import { SectionHeader, Project, ToolsBadge, AboutMe } from "../components";
+import {
+  SectionHeader,
+  Project,
+  ToolsBadge,
+  AboutMe,
+  Experience,
+} from "../components";
 import tools from "../utils/tools";
 import { repos as reposInfo, IProject } from "../utils/projects";
 
@@ -69,6 +75,8 @@ const Home = ({ data }: Props) => {
                 <ToolsBadge key={index} src={el.src} toolName={el.toolName} />
               ))}
             </section>
+
+            <Experience />
 
             <SectionHeader>My projects</SectionHeader>
             <section className="project-grid mt-10">

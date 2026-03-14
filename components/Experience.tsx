@@ -14,7 +14,8 @@ const Experience = () => {
   }, [activeProjectByCompany, openCompany]);
 
   const activeExperience = experiences[openCompany];
-  const activeContribution = activeExperience?.contributions[activeProjectIndex];
+  const activeContribution =
+    activeExperience?.contributions[activeProjectIndex];
 
   return (
     <section aria-label="Work experience" className="my-16">
@@ -65,31 +66,35 @@ const Experience = () => {
                   <span className="mx-2">|</span>
                   {activeExperience.location}
                 </p>
-                <p className="opacity-60 text-sm mt-1">{activeExperience.period}</p>
+                <p className="opacity-60 text-sm mt-1">
+                  {activeExperience.period}
+                </p>
               </header>
 
               <div className="mt-6 border-b border-main-dark/15 dark:border-white/10">
                 <div className="flex items-center gap-2 overflow-x-auto styled-scroll pb-3">
-                  {activeExperience.contributions.map((contribution, contributionIndex) => {
-                    const isActive = activeProjectIndex === contributionIndex;
-                    return (
-                      <button
-                        key={contribution.title}
-                        onClick={() =>
-                          setActiveProjectByCompany((current) => ({
-                            ...current,
-                            [openCompany]: contributionIndex,
-                          }))
-                        }
-                        className={`px-3 py-2 rounded-md text-sm whitespace-nowrap border transition-colors ${
-                          isActive
-                            ? "bg-main-dark text-white dark:bg-main-light dark:text-main-dark border-main-dark dark:border-main-light"
-                            : "border-main-dark/20 dark:border-white/20 hover:bg-blue-200/20 dark:hover:bg-white/5"
-                        }`}>
-                        {contribution.title}
-                      </button>
-                    );
-                  })}
+                  {activeExperience.contributions.map(
+                    (contribution, contributionIndex) => {
+                      const isActive = activeProjectIndex === contributionIndex;
+                      return (
+                        <button
+                          key={contribution.title}
+                          onClick={() =>
+                            setActiveProjectByCompany((current) => ({
+                              ...current,
+                              [openCompany]: contributionIndex,
+                            }))
+                          }
+                          className={`px-3 py-2 rounded-md text-sm whitespace-nowrap border transition-colors ${
+                            isActive
+                              ? "bg-main-dark text-white dark:bg-main-light dark:text-main-dark border-main-dark dark:border-main-light"
+                              : "border-main-dark/20 dark:border-white/20 hover:bg-blue-200/20 dark:hover:bg-white/5"
+                          }`}>
+                          {contribution.title}
+                        </button>
+                      );
+                    },
+                  )}
                 </div>
               </div>
 
@@ -97,7 +102,9 @@ const Experience = () => {
                 <section className="pt-5">
                   <ul className="space-y-3 pl-5">
                     {activeContribution.points.map((point) => (
-                      <li key={point} className="c-list-style opacity-90 leading-relaxed">
+                      <li
+                        key={point}
+                        className="c-list-style opacity-90 leading-relaxed">
                         {point}
                       </li>
                     ))}

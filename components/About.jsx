@@ -90,11 +90,11 @@ const About = () => {
 
             <ul className="grid grid-cols-2 px-6 py-3  max-w-xs">
               <li className="c-list-style">JavaScript</li>
-              <li className="c-list-style">React.js</li>
-              <li className="c-list-style">Node.js</li>
               <li className="c-list-style">Typescript</li>
+              <li className="c-list-style">React.js</li>
+              <li className="c-list-style">Angular.js</li>
               <li className="c-list-style">Vue.js</li>
-              {/* <li className="c-list-style"></li> */}
+              <li className="c-list-style">Node.js</li>
             </ul>
           </div>
         </section>

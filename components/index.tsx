@@ -9,3 +9,4 @@ export { default as Project } from "./Project";
 export { default as ToolsBadge } from "./ToolsBadge";
 export { default as Experience } from "./Experience";
 export { default as AboutMe } from "./About";
+export { default as Experience } from "./Experience";
