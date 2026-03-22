@@ -58,6 +58,50 @@ export const experiences: IExperience[] = [
     ],
   },
   {
+  company: "Lightway Finance",
+  role: "Senior Frontend Engineer",
+  period: "March 2024 – January 2026",
+  location: "Hybrid, Lagos, Nigeria",
+  contributions: [
+    {
+      title: "Cross-Border FX Customer Platform",
+      points: [
+        "Architected and built the primary customer-facing FX application from scratch, supporting over ₦100M+ in monthly transaction volume[cite: 19, 20].",
+        "Collaborated with UI/UX teams to implement user-centric features and rapid prototypes for seamless currency exchange flows[cite: 21, 22].",
+        "Engineered reusable, high-performance components that reduced overall development time for new feature rollouts[cite: 25, 43]."
+      ],
+      technologies: ["React", "Redux", "TypeScript", "Tailwind CSS"]
+    },
+    {
+      title: "MTN MoMo & Fintech Dashboards",
+      points: [
+        "Developed specialized dashboards for MTN MoMo, TerraPay, and ClearBank integrations to monitor and manage digital payment flows[cite: 3, 23].",
+        "Integrated complex financial APIs to ensure real-time data accuracy and seamless settlement processes[cite: 23, 24].",
+        "Implemented data visualization tools like ECharts to provide clear insights into transaction success rates and liquidity[cite: 10, 52]."
+      ],
+      technologies: ["React", "REST APIs", "ECharts", "Zustand"]
+    },
+    {
+      title: "Internal Admin & Operations Tool",
+      points: [
+        "Built the internal administrative tool used to manage high-volume transactions, user verification, and financial auditing[cite: 14].",
+        "Established frontend architecture, coding standards, and testing strategies to ensure the tool's long-term sustainability and security[cite: 44].",
+        "Led regular code reviews and Agile rituals to maintain high code quality across the admin ecosystem[cite: 45]."
+      ],
+      technologies: ["React", "Material UI", "React Query"]
+    },
+    {
+      title: "Multi-Regional Web Presence (MFB & Canada)",
+      points: [
+        "Led the development of the Microfinance Bank (MFB) and Canadian market websites, ensuring responsive design and SEO optimization[cite: 71, 72].",
+        "Managed multiple project timelines simultaneously, delivering localized web experiences for different regulatory and user requirements.",
+        "Ensured cross-browser compatibility and semantic HTML/CSS for a professional, bank-grade online presence[cite: 71, 72]."
+      ],
+      technologies: ["Next.js", "TypeScript", "SCSS"]
+    }
+  ]
+},
+  {
     company: "Lightway Finance",
     role: "Senior Frontend Engineer",
     period: "March 2024 – January 2026",
