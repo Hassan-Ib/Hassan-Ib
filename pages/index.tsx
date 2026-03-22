@@ -10,8 +10,13 @@ import {
 import Link from "next/link";
 import type { GetStaticProps } from "next";
 import { getRepos } from "../Api/repos";
-import { SectionHeader, Project, ToolsBadge } from "../components";
-import AboutMe from "../components/About";
+import {
+  SectionHeader,
+  Project,
+  ToolsBadge,
+  AboutMe,
+  Experience,
+} from "../components";
 import tools from "../utils/tools";
 import { repos as reposInfo, IProject } from "../utils/projects";
 
@@ -31,7 +36,7 @@ const Home = ({ data }: Props) => {
       <Navigation />
       <Container>
         <header className="h-[700px] md:h-[600px]  py-6 px-4 flex flex-col justify-around md:flex-row md:items-center md:justify-around ">
-          <Meta title="Hassan Ibrahim Ayomide | Frontend software developer | Software Engineer | Frontend Engineer" />
+          <Meta title="Hassan Ibrahim Ayomide | Frontend software developer | Software Engineer" />
           <section className=" flex flex-col self-start md:self-auto items-start">
             <HassanProfile />
             <div className="my-8  md:my-10 font-barlow tracking-widest">
@@ -65,12 +70,13 @@ const Home = ({ data }: Props) => {
           <section aria-label="Hassan Ibrahim projects" className="my-16">
             <section
               aria-label="Hassan Ibrahim development tools || web developer"
-              className="flex justify-center items-center gap-3 pt-16 my-16"
-            >
+              className="flex justify-center items-center gap-3 pt-16 my-16">
               {tools.map((el, index) => (
                 <ToolsBadge key={index} src={el.src} toolName={el.toolName} />
               ))}
             </section>
+
+            <Experience />
 
             <SectionHeader>My projects</SectionHeader>
             <section className="project-grid mt-10">
@@ -95,6 +101,7 @@ export default Home;
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const reposName = reposInfo.map((el) => el.repo);
+    // console.log("reposName", reposName);
     const data = await getRepos(reposName);
 
     if (!data) {
@@ -112,14 +119,14 @@ export const getStaticProps: GetStaticProps = async () => {
       };
     });
 
+    // console.log("filteredData", filteredData);
     return {
       props: {
         data: JSON.stringify(filteredData),
       },
     };
   } catch (error) {
-    const err = error as Error;
-    console.log(err.message);
+    console.log(error);
     return {
       notFound: true,
     };

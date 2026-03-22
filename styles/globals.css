@@ -14,7 +14,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-purple-100 dark:bg-main-dark text-black dark:text-primary-white;
+    @apply bg-white dark:bg-main-dark text-black dark:text-primary-white;
   }
   summary {
     display: inline-block;

@@ -7,4 +7,6 @@ export { default as HassanProfile } from "./HassanProfile";
 export { default as SectionHeader } from "./SectionHeader";
 export { default as Project } from "./Project";
 export { default as ToolsBadge } from "./ToolsBadge";
+export { default as Experience } from "./Experience";
 export { default as AboutMe } from "./About";
+// export { default as Experience } from "./Experience";
